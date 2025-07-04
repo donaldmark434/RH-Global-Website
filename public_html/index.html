@@ -118,61 +118,84 @@
                 <button 
                     @click="mobileMenuOpen = !mobileMenuOpen"
                     :aria-expanded="mobileMenuOpen"
-                    aria-label="Toggle navigation menu"
-                    class="lg:hidden relative z-50 w-10 h-10 rounded-lg bg-rh-orange flex items-center justify-center transition-all duration-300"
+                    aria-label="Open navigation menu"
+                    class="lg:hidden relative z-50 w-12 h-12 rounded-lg bg-rh-orange flex items-center justify-center transition-all duration-300 hamburger-btn"
                 >
-                    <div class="w-6 h-6 flex flex-col justify-center items-center">
-                        <span :class="mobileMenuOpen ? 'rotate-45 translate-y-0.5' : ''" class="block w-5 h-0.5 bg-white transition-all duration-300 transform"></span>
-                        <span :class="mobileMenuOpen ? 'opacity-0' : ''" class="block w-5 h-0.5 bg-white my-1 transition-all duration-300"></span>
-                        <span :class="mobileMenuOpen ? '-rotate-45 -translate-y-0.5' : ''" class="block w-5 h-0.5 bg-white transition-all duration-300 transform"></span>
+                    <!-- Hamburger Icon (3 bars) -->
+                    <div x-show="!mobileMenuOpen" class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                        <span class="block w-5 h-0.5 bg-white transition-all duration-300"></span>
+                        <span class="block w-5 h-0.5 bg-white transition-all duration-300"></span>
+                        <span class="block w-5 h-0.5 bg-white transition-all duration-300"></span>
+                    </div>
+                    
+                    <!-- Close Icon (X) -->
+                    <div x-show="mobileMenuOpen" class="w-6 h-6 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
                     </div>
                 </button>
             </div>
         </div>
-        
-        <!-- Mobile Navigation Menu -->
-        <div 
-            x-show="mobileMenuOpen"
-            x-transition:enter="transition duration-300 ease-out"
-            x-transition:enter-start="opacity-0 transform translate-y-full"
-            x-transition:enter-end="opacity-100 transform translate-y-0"
-            x-transition:leave="transition duration-300 ease-in"
-            x-transition:leave-start="opacity-100 transform translate-y-0"
-            x-transition:leave-end="opacity-0 transform translate-y-full"
-            class="lg:hidden fixed inset-0 top-0 bg-rh-dark/98 backdrop-blur-lg z-40"
-            style="display: none;"
-        >
-            <!-- Backdrop -->
-            <div @click="mobileMenuOpen = false" class="absolute inset-0 bg-black/50"></div>
+    </header>
+    
+    <!-- Mobile Navigation Backdrop -->
+    <div 
+        x-show="mobileMenuOpen"
+        x-transition:enter="transition-opacity duration-300 ease-out"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition-opacity duration-300 ease-in"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        @click="mobileMenuOpen = false"
+        class="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+        style="display: none;"
+    ></div>
+    
+    <!-- Mobile Navigation Menu (Slides up from bottom) -->
+    <nav 
+        x-show="mobileMenuOpen"
+        x-transition:enter="transition duration-300 ease-out"
+        x-transition:enter-start="transform translate-y-full"
+        x-transition:enter-end="transform translate-y-0"
+        x-transition:leave="transition duration-300 ease-in"
+        x-transition:leave-start="transform translate-y-0"
+        x-transition:leave-end="transform translate-y-full"
+        class="lg:hidden fixed bottom-0 left-0 right-0 bg-rh-dark z-50 mobile-nav"
+        style="display: none; height: 100vh;"
+    >
+        <div class="flex flex-col h-full pt-24 pb-8 px-8">
+            <!-- Mobile Menu Items -->
+            <div class="flex-1 flex flex-col justify-center space-y-8">
+                <a href="index.html" @click="mobileMenuOpen = false" class="text-4xl font-bold text-rh-orange transition-colors text-center">Home</a>
+                <a href="about.html" @click="mobileMenuOpen = false" class="text-4xl font-bold text-white hover:text-rh-orange transition-colors text-center">About</a>
+                <a href="services.html" @click="mobileMenuOpen = false" class="text-4xl font-bold text-white hover:text-rh-orange transition-colors text-center">Services</a>
+                <a href="projects.html" @click="mobileMenuOpen = false" class="text-4xl font-bold text-white hover:text-rh-orange transition-colors text-center">Projects</a>
+                <a href="blog.html" @click="mobileMenuOpen = false" class="text-4xl font-bold text-white hover:text-rh-orange transition-colors text-center">Blog</a>
+                <a href="contact.html" @click="mobileMenuOpen = false" class="text-4xl font-bold text-white hover:text-rh-orange transition-colors text-center">Contact</a>
+            </div>
             
-            <!-- Menu Content -->
-            <nav class="relative h-full flex flex-col justify-center items-center space-y-8 px-8">
-                <a href="index.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-rh-orange transition-colors">Home</a>
-                <a href="about.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">About</a>
-                <a href="services.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Services</a>
-                <a href="projects.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Projects</a>
-                <a href="blog.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Blog</a>
-                <a href="contact.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Contact</a>
-                
-                <!-- Mobile CTA -->
-                <a href="contact.html#quote" @click="mobileMenuOpen = false" class="bg-rh-orange text-white px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 hover:bg-orange-600 hover:scale-105 mt-8">
+            <!-- Mobile CTA Button -->
+            <div class="text-center">
+                <a href="contact.html#quote" @click="mobileMenuOpen = false" class="inline-block bg-rh-orange text-white px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 hover:bg-orange-600 hover:scale-105">
                     Get Quote
                 </a>
-                
-                <!-- Contact Info -->
-                <div class="mt-12 text-center space-y-4">
-                    <div class="flex items-center justify-center space-x-3">
-                        <i class="fa fa-phone text-rh-orange"></i>
-                        <span class="text-white">+234 808 7504 954</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-3">
-                        <i class="fa fa-envelope text-rh-orange"></i>
-                        <span class="text-white">info@rhglobal.ng</span>
-                    </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="mt-8 text-center space-y-4">
+                <div class="flex items-center justify-center space-x-3">
+                    <i class="fa fa-phone text-rh-orange"></i>
+                    <span class="text-white">+234 808 7504 954</span>
                 </div>
-            </nav>
+                <div class="flex items-center justify-center space-x-3">
+                    <i class="fa fa-envelope text-rh-orange"></i>
+                    <span class="text-white">info@rhglobal.ng</span>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Revolution Slider -->
     <section class="relative h-screen overflow-hidden">
