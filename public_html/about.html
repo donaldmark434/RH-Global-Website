@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RH Global Innovation Nig Ltd | Premier Construction Company Lagos</title>
+    <meta name="description" content="Learn about RH Global Innovation's mission, vision, and leadership. Led by CEO Silas Stephen Oyaluna, we deliver quality construction and design services across Nigeria.">
+    <meta name="keywords" content="about RH Global Innovation, construction company Lagos, CEO Silas Stephen Oyaluna, building company Nigeria">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About RH Global Innovation - Premier Construction Company Lagos">
+    <meta property="og:description" content="Learn about our mission, vision, and leadership in construction and design">
+    <meta property="og:image" content="https://rhglobal.ng/assets/images/website images, videos/about-rh-global.png">
+    <meta property="og:url" content="https://rhglobal.ng/about.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/favicon.png">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/off-canvas.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/rsmenu-main.css">
+    <link rel="stylesheet" href="assets/css/rs-spacing.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- CDN Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rh-orange': '#FF8C00',
+                        'rh-navy': '#1B365D',
+                        'rh-dark': '#1a1a1a',
+                        'rh-gray': '#2a2a2a'
+                    },
+                    fontFamily: {
+                        'heading': ['Roboto Slab', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body class="dark bg-rh-dark text-white" x-data="{ mobileMenuOpen: false }" x-init="$watch('mobileMenuOpen', value => document.body.style.overflow = value ? 'hidden' : '')">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-rh-dark/95 backdrop-blur-sm border-b border-rh-gray/20" id="header">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="block">
+                        <img src="assets/images/logo/logo-white.png" alt="RH Global Innovation Logo" class="h-12 md:h-14 lg:h-16 w-auto transition-all duration-300">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-white font-medium transition-colors hover:text-rh-orange">Home</a>
+                    <a href="about.html" class="text-rh-orange font-medium transition-colors hover:text-orange-400" aria-current="page">About</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <a href="services.html" class="text-white font-medium transition-colors hover:text-rh-orange flex items-center">
+                            Services <i class="fa fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </a>
+                        <div class="absolute top-full left-0 w-64 bg-rh-gray rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 mt-2">
+                            <div class="p-4 space-y-2">
+                                <a href="services.html#construction" class="block text-white hover:text-rh-orange transition-colors py-2">Building Construction</a>
+                                <a href="services.html#interior" class="block text-white hover:text-rh-orange transition-colors py-2">Interior Design</a>
+                                <a href="services.html#exterior" class="block text-white hover:text-rh-orange transition-colors py-2">Exterior Design</a>
+                                <a href="services.html#specialized" class="block text-white hover:text-rh-orange transition-colors py-2">Specialized Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="projects.html" class="text-white font-medium transition-colors hover:text-rh-orange">Projects</a>
+                    <a href="blog.html" class="text-white font-medium transition-colors hover:text-rh-orange">Blog</a>
+                    <a href="contact.html" class="text-white font-medium transition-colors hover:text-rh-orange">Contact</a>
+                    
+                    <!-- CTA Button -->
+                    <a href="contact.html#quote" class="bg-rh-orange text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:scale-105 hover:shadow-lg">
+                        Get Quote
+                    </a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button 
+                    @click="mobileMenuOpen = !mobileMenuOpen"
+                    :aria-expanded="mobileMenuOpen"
+                    aria-label="Toggle navigation menu"
+                    class="lg:hidden relative z-50 w-10 h-10 rounded-lg bg-rh-orange flex items-center justify-center transition-all duration-300"
+                >
+                    <div class="w-6 h-6 flex flex-col justify-center items-center">
+                        <span :class="mobileMenuOpen ? 'rotate-45 translate-y-0.5' : ''" class="block w-5 h-0.5 bg-white transition-all duration-300 transform"></span>
+                        <span :class="mobileMenuOpen ? 'opacity-0' : ''" class="block w-5 h-0.5 bg-white my-1 transition-all duration-300"></span>
+                        <span :class="mobileMenuOpen ? '-rotate-45 -translate-y-0.5' : ''" class="block w-5 h-0.5 bg-white transition-all duration-300 transform"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div 
+            x-show="mobileMenuOpen"
+            x-transition:enter="transition duration-300 ease-out"
+            x-transition:enter-start="opacity-0 transform translate-y-full"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition duration-300 ease-in"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform translate-y-full"
+            class="lg:hidden fixed inset-0 top-0 bg-rh-dark/98 backdrop-blur-lg z-40"
+            style="display: none;"
+        >
+            <!-- Backdrop -->
+            <div @click="mobileMenuOpen = false" class="absolute inset-0 bg-black/50"></div>
+            
+            <!-- Menu Content -->
+            <nav class="relative h-full flex flex-col justify-center items-center space-y-8 px-8">
+                <a href="index.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Home</a>
+                <a href="about.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-rh-orange transition-colors">About</a>
+                <a href="services.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Services</a>
+                <a href="projects.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Projects</a>
+                <a href="blog.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Blog</a>
+                <a href="contact.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Contact</a>
+                
+                <!-- Mobile CTA -->
+                <a href="contact.html#quote" @click="mobileMenuOpen = false" class="bg-rh-orange text-white px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 hover:bg-orange-600 hover:scale-105 mt-8">
+                    Get Quote
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-r from-rh-dark via-rh-gray to-rh-dark">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-rh-dark/50"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <nav class="mb-8">
+                    <ol class="flex justify-center items-center space-x-2 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-rh-orange transition-colors">Home</a></li>
+                        <li class="text-gray-400">/</li>
+                        <li class="text-rh-orange">About Us</li>
+                    </ol>
+                </nav>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6">
+                    About <span class="text-rh-orange">RH Global</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Building excellence across Nigeria with integrity, innovation, and unwavering commitment to customer satisfaction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story Section -->
+    <section class="py-16 lg:py-24 bg-rh-dark">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Content -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-8 text-white">
+                        Our <span class="text-rh-orange">Story</span>
+                    </h2>
+                    <div class="space-y-6">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            RH Global Innovation Nig Ltd was founded with a vision to transform the construction 
+                            landscape in Nigeria. Starting as a small construction company in Lagos, we have grown 
+                            to become one of the most trusted names in building construction and design services.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Our journey began with a simple belief: every construction project deserves exceptional 
+                            quality, innovative solutions, and transparent communication. This philosophy has guided 
+                            us through countless successful projects and established our reputation for excellence.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Through strategic partnerships, including our collaboration with Mekan Engineering, 
+                            we have expanded our capabilities and enhanced our service offerings to provide 
+                            comprehensive construction solutions.
+                        </p>
+                    </div>
+                    
+                    <!-- Key Achievements -->
+                    <div class="grid grid-cols-2 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-rh-orange mb-2">50+</div>
+                            <div class="text-gray-300">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-rh-orange mb-2">5+</div>
+                            <div class="text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-rh-orange mb-2">100%</div>
+                            <div class="text-gray-300">Client Satisfaction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-rh-orange mb-2">24/7</div>
+                            <div class="text-gray-300">Support</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image -->
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <img src="assets/images/website images, videos/about-rh-global.png" alt="RH Global Innovation Story" class="w-full rounded-lg shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rh-orange/20 to-transparent rounded-lg"></div>
+                        
+                        <!-- Floating Card -->
+                        <div class="absolute -bottom-6 -left-6 bg-rh-orange rounded-lg p-6 shadow-xl">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-white mb-1">Excellence</div>
+                                <div class="text-orange-100 text-sm">Since 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision & Values -->
+    <section class="py-16 lg:py-24 bg-rh-gray">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 text-white">
+                    Our <span class="text-rh-orange">Foundation</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    Built on strong principles that guide every decision and drive our commitment to excellence.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Mission -->
+                <div class="bg-rh-dark rounded-xl p-8 text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-rh-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-bullseye text-3xl text-rh-orange"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Our Mission</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        To deliver exceptional construction and design services that exceed client expectations, 
+                        using innovative solutions and maintaining the highest standards of quality and integrity.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="bg-rh-dark rounded-xl p-8 text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-rh-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-eye text-3xl text-rh-orange"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Our Vision</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        To become Nigeria's leading construction company, recognized for transforming skylines 
+                        and communities through innovative, sustainable, and cost-effective building solutions.
+                    </p>
+                </div>
+                
+                <!-- Values -->
+                <div class="bg-rh-dark rounded-xl p-8 text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-rh-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-heart text-3xl text-rh-orange"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Our Values</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Integrity in all dealings, innovation in our solutions, customer satisfaction as our priority, 
+                        and a commitment to affordability without compromising quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-16 lg:py-24 bg-rh-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 text-white">
+                    Our <span class="text-rh-orange">Leadership</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    Meet the visionary leader driving RH Global Innovation towards excellence in construction and design.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- CEO Image -->
+                    <div data-aos="fade-right">
+                        <div class="relative">
+                            <img src="assets/images/website images, videos/author2.png" alt="CEO Silas Stephen Oyaluna" class="w-full max-w-md mx-auto lg:mx-0 rounded-lg shadow-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-rh-orange/20 to-transparent rounded-lg"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- CEO Content -->
+                    <div data-aos="fade-left">
+                        <div class="mb-6">
+                            <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-2">
+                                Silas Stephen <span class="text-rh-orange">Oyaluna</span>
+                            </h3>
+                            <p class="text-xl text-rh-orange font-semibold">Chief Executive Officer & Founder</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                With over a decade of experience in the construction industry, Silas Stephen Oyaluna 
+                                founded RH Global Innovation with a vision to revolutionize construction services in Nigeria. 
+                                His commitment to quality and innovation has positioned the company as a leader in the industry.
+                            </p>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                Under his leadership, RH Global has completed numerous successful projects, establishing 
+                                strong partnerships and maintaining an unwavering focus on customer satisfaction and 
+                                operational excellence.
+                            </p>
+                            
+                            <!-- CEO Achievements -->
+                            <div class="bg-rh-gray rounded-lg p-6 mt-8">
+                                <h4 class="text-xl font-bold text-white mb-4">Key Achievements</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center text-gray-300">
+                                        <i class="fa fa-check-circle text-rh-orange mr-3"></i>
+                                        Founded and scaled RH Global Innovation
+                                    </li>
+                                    <li class="flex items-center text-gray-300">
+                                        <i class="fa fa-check-circle text-rh-orange mr-3"></i>
+                                        Established strategic industry partnerships
+                                    </li>
+                                    <li class="flex items-center text-gray-300">
+                                        <i class="fa fa-check-circle text-rh-orange mr-3"></i>
+                                        Implemented quality assurance standards
+                                    </li>
+                                    <li class="flex items-center text-gray-300">
+                                        <i class="fa fa-check-circle text-rh-orange mr-3"></i>
+                                        Achieved 100% client satisfaction rate
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="py-16 lg:py-24 bg-rh-gray">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 text-white">
+                    How We <span class="text-rh-orange">Work</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    Our proven 3-step process ensures every project is delivered with excellence and precision.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-rh-dark rounded-xl p-8 text-center relative z-10">
+                        <div class="w-16 h-16 bg-rh-orange rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                            1
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Consultation & Planning</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            We begin with a detailed consultation to understand your vision, requirements, and budget. 
+                            Our team creates comprehensive plans and provides transparent cost estimates.
+                        </p>
+                    </div>
+                    <!-- Connector Line -->
+                    <div class="hidden md:block absolute top-1/2 right-0 w-8 h-0.5 bg-rh-orange transform translate-x-4 -translate-y-1/2 z-0"></div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-rh-dark rounded-xl p-8 text-center relative z-10">
+                        <div class="w-16 h-16 bg-rh-orange rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                            2
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Design & Development</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Our expert designers and engineers develop detailed blueprints and 3D models. 
+                            We ensure all designs meet safety standards and regulatory requirements.
+                        </p>
+                    </div>
+                    <!-- Connector Line -->
+                    <div class="hidden md:block absolute top-1/2 right-0 w-8 h-0.5 bg-rh-orange transform translate-x-4 -translate-y-1/2 z-0"></div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-rh-dark rounded-xl p-8 text-center relative z-10">
+                        <div class="w-16 h-16 bg-rh-orange rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Construction & Delivery</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            We execute the project with precision, maintaining regular communication and quality checks. 
+                            We deliver on time, within budget, and exceed expectations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 lg:py-24 bg-rh-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 text-white">
+                    Why Choose <span class="text-rh-orange">RH Global</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    Discover what sets us apart as Nigeria's premier construction and design company.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Quality -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-rh-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-star text-3xl text-rh-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Premium Quality</h3>
+                    <p class="text-gray-300">
+                        We use only the finest materials and employ skilled craftsmen to ensure exceptional quality in every project.
+                    </p>
+                </div>
+                
+                <!-- Cost-Effective -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-rh-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-dollar text-3xl text-rh-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Cost-Effective</h3>
+                    <p class="text-gray-300">
+                        Competitive pricing without compromising quality. We offer flexible payment plans to suit various budgets.
+                    </p>
+                </div>
+                
+                <!-- Expertise -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-rh-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-users text-3xl text-rh-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Expert Team</h3>
+                    <p class="text-gray-300">
+                        Our team of experienced professionals brings years of expertise and innovative solutions to every project.
+                    </p>
+                </div>
+                
+                <!-- Client-Centric -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-rh-orange/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-handshake-o text-3xl text-rh-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Client-Centric</h3>
+                    <p class="text-gray-300">
+                        Your satisfaction is our priority. We maintain open communication and adapt to your needs throughout the process.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 lg:py-24 bg-rh-orange">
+        <div class="container mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 text-white">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+                    Let's bring your vision to life with our expert construction and design services. 
+                    Contact us today for a free consultation and quote.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html#quote" class="bg-white text-rh-orange px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:shadow-xl inline-flex items-center justify-center">
+                        Get Free Quote <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="projects.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-white hover:text-rh-orange inline-flex items-center justify-center">
+                        View Our Work <i class="fa fa-external-link ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rh-dark border-t border-rh-gray/20">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <img src="assets/images/logo/footer-logo.png" alt="RH Global Innovation" class="h-12 mb-6">
+                    <p class="text-gray-300 leading-relaxed mb-6 max-w-md">
+                        Premier construction and design company in Lagos, Nigeria, committed to delivering excellence 
+                        in building construction, interior design, and specialized services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                    <div class="space-y-3">
+                        <a href="index.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Home</a>
+                        <a href="about.html" class="block text-gray-300 hover:text-rh-orange transition-colors">About Us</a>
+                        <a href="services.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Services</a>
+                        <a href="projects.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Projects</a>
+                        <a href="blog.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Blog</a>
+                        <a href="contact.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Contact Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa fa-map-marker text-rh-orange mt-1"></i>
+                            <div class="text-gray-300">
+                                Plot 34 Block 8c FGHS Pipeline Aboru,<br>
+                                Iyana Ipaja, Lagos, Nigeria
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa fa-phone text-rh-orange"></i>
+                            <div class="text-gray-300">
+                                <a href="tel:+2348087504954" class="hover:text-rh-orange transition-colors">+234 808 7504 954</a><br>
+                                <a href="tel:+2348135559872" class="hover:text-rh-orange transition-colors">+234 813 5559 872</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa fa-envelope text-rh-orange"></i>
+                            <div class="text-gray-300">
+                                <a href="mailto:info@rhglobal.ng" class="hover:text-rh-orange transition-colors">info@rhglobal.ng</a><br>
+                                <a href="mailto:jobs@rhglobal.ng" class="hover:text-rh-orange transition-colors">jobs@rhglobal.ng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-rh-gray/20 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-300 mb-4 md:mb-0">
+                        © 2025 RH Global Innovation Nig Ltd. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-rh-orange transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-rh-orange transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348087504954?text=Hello%20RH%20Global,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 group"
+       aria-label="Contact us on WhatsApp">
+        <i class="fa fa-whatsapp text-white text-2xl group-hover:scale-110 transition-transform duration-300"></i>
+        <div class="absolute right-full mr-3 bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            Chat with us!
+        </div>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/skill.bars.jquery.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/contact.form.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- CDN Libraries -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-rh-dark/98');
+                header.classList.remove('bg-rh-dark/95');
+            } else {
+                header.classList.remove('bg-rh-dark/98');
+                header.classList.add('bg-rh-dark/95');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+            "@type": "ConstructionBusiness",
+            "name": "RH Global Innovation Nig Ltd",
+            "description": "Premier construction and design company in Lagos, Nigeria",
+            "url": "https://rhglobal.ng",
+            "founder": {
+                "@type": "Person",
+                "name": "Silas Stephen Oyaluna",
+                "jobTitle": "CEO"
+            },
+            "foundingDate": "2019",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot 34 Block 8c FGHS Pipeline Aboru",
+                "addressLocality": "Iyana Ipaja",
+                "addressRegion": "Lagos",
+                "addressCountry": "Nigeria"
+            },
+            "telephone": ["+234 808 7504 954", "+234 813 5559 872"],
+            "email": ["info@rhglobal.ng", "jobs@rhglobal.ng"]
+        }
+    }
+    </script>
+</body>
+</html>
