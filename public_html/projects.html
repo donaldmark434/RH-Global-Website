@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Projects Portfolio - RH Global Innovation Lagos</title>
+    <meta name="description" content="View our portfolio of completed construction and design projects in Lagos, Nigeria. Building construction, interior design, and specialized services showcase.">
+    <meta name="keywords" content="construction projects Lagos, building portfolio Nigeria, interior design projects, construction gallery Lagos">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Construction Projects Portfolio - RH Global Innovation">
+    <meta property="og:description" content="View our impressive portfolio of construction and design projects">
+    <meta property="og:image" content="https://rhglobal.ng/assets/images/website images, videos/3-scaled.jpg">
+    <meta property="og:url" content="https://rhglobal.ng/projects.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo/favicon.png">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/off-canvas.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/rsmenu-main.css">
+    <link rel="stylesheet" href="assets/css/rs-spacing.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- CDN Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rh-orange': '#FF8C00',
+                        'rh-navy': '#1B365D',
+                        'rh-dark': '#1a1a1a',
+                        'rh-gray': '#2a2a2a'
+                    },
+                    fontFamily: {
+                        'heading': ['Roboto Slab', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body class="dark bg-rh-dark text-white" x-data="{ mobileMenuOpen: false, activeFilter: 'all', lightboxOpen: false, lightboxImage: '', lightboxTitle: '' }" x-init="$watch('mobileMenuOpen', value => document.body.style.overflow = value ? 'hidden' : '')">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-rh-dark/95 backdrop-blur-sm border-b border-rh-gray/20" id="header">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="block">
+                        <img src="assets/images/logo/logo-white.png" alt="RH Global Innovation Logo" class="h-12 md:h-14 lg:h-16 w-auto transition-all duration-300">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-white font-medium transition-colors hover:text-rh-orange">Home</a>
+                    <a href="about.html" class="text-white font-medium transition-colors hover:text-rh-orange">About</a>
+                    
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <a href="services.html" class="text-white font-medium transition-colors hover:text-rh-orange flex items-center">
+                            Services <i class="fa fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
+                        </a>
+                        <div class="absolute top-full left-0 w-64 bg-rh-gray rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 mt-2">
+                            <div class="p-4 space-y-2">
+                                <a href="services.html#construction" class="block text-white hover:text-rh-orange transition-colors py-2">Building Construction</a>
+                                <a href="services.html#interior" class="block text-white hover:text-rh-orange transition-colors py-2">Interior Design</a>
+                                <a href="services.html#exterior" class="block text-white hover:text-rh-orange transition-colors py-2">Exterior Design</a>
+                                <a href="services.html#specialized" class="block text-white hover:text-rh-orange transition-colors py-2">Specialized Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="projects.html" class="text-rh-orange font-medium transition-colors hover:text-orange-400" aria-current="page">Projects</a>
+                    <a href="blog.html" class="text-white font-medium transition-colors hover:text-rh-orange">Blog</a>
+                    <a href="contact.html" class="text-white font-medium transition-colors hover:text-rh-orange">Contact</a>
+                    
+                    <!-- CTA Button -->
+                    <a href="contact.html#quote" class="bg-rh-orange text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-orange-600 hover:scale-105 hover:shadow-lg">
+                        Get Quote
+                    </a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button 
+                    @click="mobileMenuOpen = !mobileMenuOpen"
+                    :aria-expanded="mobileMenuOpen"
+                    aria-label="Toggle navigation menu"
+                    class="lg:hidden relative z-50 w-10 h-10 rounded-lg bg-rh-orange flex items-center justify-center transition-all duration-300"
+                >
+                    <div class="w-6 h-6 flex flex-col justify-center items-center">
+                        <span :class="mobileMenuOpen ? 'rotate-45 translate-y-0.5' : ''" class="block w-5 h-0.5 bg-white transition-all duration-300 transform"></span>
+                        <span :class="mobileMenuOpen ? 'opacity-0' : ''" class="block w-5 h-0.5 bg-white my-1 transition-all duration-300"></span>
+                        <span :class="mobileMenuOpen ? '-rotate-45 -translate-y-0.5' : ''" class="block w-5 h-0.5 bg-white transition-all duration-300 transform"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div 
+            x-show="mobileMenuOpen"
+            x-transition:enter="transition duration-300 ease-out"
+            x-transition:enter-start="opacity-0 transform translate-y-full"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition duration-300 ease-in"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform translate-y-full"
+            class="lg:hidden fixed inset-0 top-0 bg-rh-dark/98 backdrop-blur-lg z-40"
+            style="display: none;"
+        >
+            <!-- Backdrop -->
+            <div @click="mobileMenuOpen = false" class="absolute inset-0 bg-black/50"></div>
+            
+            <!-- Menu Content -->
+            <nav class="relative h-full flex flex-col justify-center items-center space-y-8 px-8">
+                <a href="index.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Home</a>
+                <a href="about.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">About</a>
+                <a href="services.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Services</a>
+                <a href="projects.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-rh-orange transition-colors">Projects</a>
+                <a href="blog.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Blog</a>
+                <a href="contact.html" @click="mobileMenuOpen = false" class="text-3xl font-bold text-white hover:text-rh-orange transition-colors">Contact</a>
+                
+                <!-- Mobile CTA -->
+                <a href="contact.html#quote" @click="mobileMenuOpen = false" class="bg-rh-orange text-white px-8 py-4 rounded-lg text-xl font-bold transition-all duration-300 hover:bg-orange-600 hover:scale-105 mt-8">
+                    Get Quote
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="relative pt-32 pb-20 bg-gradient-to-r from-rh-dark via-rh-gray to-rh-dark">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-rh-dark/50"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <nav class="mb-8">
+                    <ol class="flex justify-center items-center space-x-2 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-rh-orange transition-colors">Home</a></li>
+                        <li class="text-gray-400">/</li>
+                        <li class="text-rh-orange">Projects</li>
+                    </ol>
+                </nav>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6">
+                    Our <span class="text-rh-orange">Projects</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Explore our portfolio of successful construction and design projects across Lagos and Nigeria.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="py-16 bg-rh-gray">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8" data-aos="fade-up">
+                
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-rh-orange mb-2">50+</div>
+                    <div class="text-gray-300">Projects Completed</div>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-rh-orange mb-2">100%</div>
+                    <div class="text-gray-300">Client Satisfaction</div>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-rh-orange mb-2">5+</div>
+                    <div class="text-gray-300">Years Experience</div>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-rh-orange mb-2">24/7</div>
+                    <div class="text-gray-300">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="py-8 bg-rh-dark sticky top-20 z-40 border-b border-rh-gray/20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up">
+                <button @click="activeFilter = 'all'" :class="activeFilter === 'all' ? 'bg-rh-orange text-white' : 'bg-rh-gray text-gray-300 hover:bg-rh-orange hover:text-white'" class="px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                    All Projects
+                </button>
+                <button @click="activeFilter = 'construction'" :class="activeFilter === 'construction' ? 'bg-rh-orange text-white' : 'bg-rh-gray text-gray-300 hover:bg-rh-orange hover:text-white'" class="px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Construction
+                </button>
+                <button @click="activeFilter = 'interior'" :class="activeFilter === 'interior' ? 'bg-rh-orange text-white' : 'bg-rh-gray text-gray-300 hover:bg-rh-orange hover:text-white'" class="px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Interior Design
+                </button>
+                <button @click="activeFilter = 'exterior'" :class="activeFilter === 'exterior' ? 'bg-rh-orange text-white' : 'bg-rh-gray text-gray-300 hover:bg-rh-orange hover:text-white'" class="px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Exterior Design
+                </button>
+                <button @click="activeFilter = 'specialized'" :class="activeFilter === 'specialized' ? 'bg-rh-orange text-white' : 'bg-rh-gray text-gray-300 hover:bg-rh-orange hover:text-white'" class="px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Specialized
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="py-16 lg:py-24 bg-rh-dark">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
+                
+                <!-- Project 1: Modern Residential Building -->
+                <div class="project-item construction" x-show="activeFilter === 'all' || activeFilter === 'construction'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/3-scaled.jpg" alt="Modern Residential Building" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/3-scaled.jpg'; lightboxTitle = 'Modern Residential Complex'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-rh-orange text-white px-3 py-1 rounded-full text-sm font-semibold">Construction</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/3-scaled.jpg'; lightboxTitle = 'Modern Residential Complex'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Modern Residential Complex</h3>
+                            <p class="text-gray-300 mb-4">Complete structural construction with modern architectural design featuring contemporary finishing and premium materials.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2024</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Luxury Interior Design -->
+                <div class="project-item interior" x-show="activeFilter === 'all' || activeFilter === 'interior'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/DSC_8019-scaled.jpg" alt="Luxury Interior Design" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/DSC_8019-scaled.jpg'; lightboxTitle = 'Luxury Interior Design'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Interior Design</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/DSC_8019-scaled.jpg'; lightboxTitle = 'Luxury Interior Design'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Luxury Interior Design</h3>
+                            <p class="text-gray-300 mb-4">Premium interior design project featuring elegant furniture selection and sophisticated color schemes.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2024</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Commercial Building -->
+                <div class="project-item construction" x-show="activeFilter === 'all' || activeFilter === 'construction'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/5-scaled.jpg" alt="Commercial Building Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/5-scaled.jpg'; lightboxTitle = 'Commercial Building Project'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-rh-orange text-white px-3 py-1 rounded-full text-sm font-semibold">Construction</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/5-scaled.jpg'; lightboxTitle = 'Commercial Building Project'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Commercial Building Project</h3>
+                            <p class="text-gray-300 mb-4">Professional commercial construction with modern facilities and efficient space utilization for business operations.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2023</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Residential Interior -->
+                <div class="project-item interior" x-show="activeFilter === 'all' || activeFilter === 'interior'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/DSC_8015-scaled.jpg" alt="Residential Interior Design" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/DSC_8015-scaled.jpg'; lightboxTitle = 'Residential Interior Design'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Interior Design</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/DSC_8015-scaled.jpg'; lightboxTitle = 'Residential Interior Design'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Residential Interior Design</h3>
+                            <p class="text-gray-300 mb-4">Complete home interior transformation with modern furniture and innovative design solutions.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2024</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Building Construction -->
+                <div class="project-item construction" x-show="activeFilter === 'all' || activeFilter === 'construction'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/7-scaled.jpg" alt="Building Construction Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/7-scaled.jpg'; lightboxTitle = 'Building Construction Project'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-rh-orange text-white px-3 py-1 rounded-full text-sm font-semibold">Construction</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/7-scaled.jpg'; lightboxTitle = 'Building Construction Project'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Building Construction Project</h3>
+                            <p class="text-gray-300 mb-4">Comprehensive building construction project with structural engineering and modern finishing techniques.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2023</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Specialized Services -->
+                <div class="project-item specialized" x-show="activeFilter === 'all' || activeFilter === 'specialized'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/istockphoto-1366768567-612x612-1.jpg" alt="Specialized Construction Services" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/istockphoto-1366768567-612x612-1.jpg'; lightboxTitle = 'Specialized Construction Services'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Specialized</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/istockphoto-1366768567-612x612-1.jpg'; lightboxTitle = 'Specialized Construction Services'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Specialized Construction Services</h3>
+                            <p class="text-gray-300 mb-4">Advanced specialized services including industrial cleaning and professional stucco application.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2024</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7: Exterior Design -->
+                <div class="project-item exterior" x-show="activeFilter === 'all' || activeFilter === 'exterior'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/8-scaled.jpg" alt="Exterior Design Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/8-scaled.jpg'; lightboxTitle = 'Exterior Design Project'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Exterior Design</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/8-scaled.jpg'; lightboxTitle = 'Exterior Design Project'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Exterior Design Project</h3>
+                            <p class="text-gray-300 mb-4">Complete facade renovation and exterior design enhancement with modern architectural elements.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2023</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8: Mixed Development -->
+                <div class="project-item construction" x-show="activeFilter === 'all' || activeFilter === 'construction'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/10-scaled.jpg" alt="Mixed Development Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/10-scaled.jpg'; lightboxTitle = 'Mixed Development Project'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-rh-orange text-white px-3 py-1 rounded-full text-sm font-semibold">Construction</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/10-scaled.jpg'; lightboxTitle = 'Mixed Development Project'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Mixed Development Project</h3>
+                            <p class="text-gray-300 mb-4">Large-scale mixed development combining residential and commercial spaces with premium construction standards.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2024</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9: Premium Interior -->
+                <div class="project-item interior" x-show="activeFilter === 'all' || activeFilter === 'interior'" x-transition:enter="transition duration-500 ease-out" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-rh-gray rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/website images, videos/DSC_8039-scaled.jpg" alt="Premium Interior Design" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/DSC_8039-scaled.jpg'; lightboxTitle = 'Premium Interior Design'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Interior Design</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <button @click="lightboxOpen = true; lightboxImage = 'assets/images/website images, videos/DSC_8039-scaled.jpg'; lightboxTitle = 'Premium Interior Design'" class="w-full bg-rh-orange/90 hover:bg-rh-orange text-white py-2 px-4 rounded transition-colors">
+                                    <i class="fa fa-expand mr-2"></i>View Full Image
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Premium Interior Design</h3>
+                            <p class="text-gray-300 mb-4">High-end interior design project with luxury finishes and custom furniture solutions.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-rh-orange font-semibold">Completed 2023</div>
+                                <div class="flex items-center text-gray-400">
+                                    <i class="fa fa-map-marker mr-1"></i>
+                                    <span class="text-sm">Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-16" data-aos="fade-up">
+                <button class="bg-rh-orange text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:bg-orange-600 hover:scale-105 hover:shadow-xl inline-flex items-center">
+                    Load More Projects <i class="fa fa-refresh ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div 
+        x-show="lightboxOpen" 
+        x-transition:enter="transition duration-300 ease-out"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition duration-300 ease-in"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        style="display: none;"
+        @keydown.escape="lightboxOpen = false"
+    >
+        <div class="relative max-w-4xl w-full">
+            <button @click="lightboxOpen = false" class="absolute -top-12 right-0 text-white hover:text-rh-orange transition-colors text-2xl">
+                <i class="fa fa-times"></i>
+            </button>
+            <img :src="lightboxImage" :alt="lightboxTitle" class="w-full h-auto rounded-lg shadow-2xl">
+            <div class="mt-4 text-center">
+                <h3 class="text-2xl font-bold text-white" x-text="lightboxTitle"></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="py-16 lg:py-24 bg-rh-orange">
+        <div class="container mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 text-white">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+                    Join our portfolio of successful projects. Contact us today to discuss your construction and design needs.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html#quote" class="bg-white text-rh-orange px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:shadow-xl inline-flex items-center justify-center">
+                        Get Free Quote <i class="fa fa-calculator ml-2"></i>
+                    </a>
+                    <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-white hover:text-rh-orange inline-flex items-center justify-center">
+                        Contact Us <i class="fa fa-phone ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rh-dark border-t border-rh-gray/20">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <img src="assets/images/logo/footer-logo.png" alt="RH Global Innovation" class="h-12 mb-6">
+                    <p class="text-gray-300 leading-relaxed mb-6 max-w-md">
+                        Premier construction and design company in Lagos, Nigeria, committed to delivering excellence 
+                        in building construction, interior design, and specialized services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-rh-orange rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                            <i class="fa fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                    <div class="space-y-3">
+                        <a href="index.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Home</a>
+                        <a href="about.html" class="block text-gray-300 hover:text-rh-orange transition-colors">About Us</a>
+                        <a href="services.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Services</a>
+                        <a href="projects.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Projects</a>
+                        <a href="blog.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Blog</a>
+                        <a href="contact.html" class="block text-gray-300 hover:text-rh-orange transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Contact Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa fa-map-marker text-rh-orange mt-1"></i>
+                            <div class="text-gray-300">
+                                Plot 34 Block 8c FGHS Pipeline Aboru,<br>
+                                Iyana Ipaja, Lagos, Nigeria
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa fa-phone text-rh-orange"></i>
+                            <div class="text-gray-300">
+                                <a href="tel:+2348087504954" class="hover:text-rh-orange transition-colors">+234 808 7504 954</a><br>
+                                <a href="tel:+2348135559872" class="hover:text-rh-orange transition-colors">+234 813 5559 872</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa fa-envelope text-rh-orange"></i>
+                            <div class="text-gray-300">
+                                <a href="mailto:info@rhglobal.ng" class="hover:text-rh-orange transition-colors">info@rhglobal.ng</a><br>
+                                <a href="mailto:jobs@rhglobal.ng" class="hover:text-rh-orange transition-colors">jobs@rhglobal.ng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-rh-gray/20 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-300 mb-4 md:mb-0">
+                        © 2025 RH Global Innovation Nig Ltd. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-rh-orange transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-rh-orange transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348087504954?text=Hello%20RH%20Global,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 group"
+       aria-label="Contact us on WhatsApp">
+        <i class="fa fa-whatsapp text-white text-2xl group-hover:scale-110 transition-transform duration-300"></i>
+        <div class="absolute right-full mr-3 bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+            Chat with us!
+        </div>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/skill.bars.jquery.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/contact.form.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- CDN Libraries -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-rh-dark/98');
+                header.classList.remove('bg-rh-dark/95');
+            } else {
+                header.classList.remove('bg-rh-dark/98');
+                header.classList.add('bg-rh-dark/95');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Project filter functionality
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('projectFilter', {
+                activeFilter: 'all',
+                projects: [
+                    { id: 1, category: 'construction', title: 'Modern Residential Complex' },
+                    { id: 2, category: 'interior', title: 'Luxury Interior Design' },
+                    { id: 3, category: 'construction', title: 'Commercial Building Project' },
+                    { id: 4, category: 'interior', title: 'Residential Interior Design' },
+                    { id: 5, category: 'construction', title: 'Building Construction Project' },
+                    { id: 6, category: 'specialized', title: 'Specialized Construction Services' },
+                    { id: 7, category: 'exterior', title: 'Exterior Design Project' },
+                    { id: 8, category: 'construction', title: 'Mixed Development Project' },
+                    { id: 9, category: 'interior', title: 'Premium Interior Design' }
+                ],
+                
+                setFilter(filter) {
+                    this.activeFilter = filter;
+                },
+                
+                getFilteredProjects() {
+                    if (this.activeFilter === 'all') {
+                        return this.projects;
+                    }
+                    return this.projects.filter(project => project.category === this.activeFilter);
+                }
+            });
+        });
+        
+        // Lightbox functionality
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                // Close lightbox on escape key
+                const lightboxEvent = new CustomEvent('keydown.escape');
+                document.dispatchEvent(lightboxEvent);
+            }
+        });
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Construction Projects Portfolio",
+        "description": "Portfolio of construction and design projects by RH Global Innovation",
+        "publisher": {
+            "@type": "ConstructionBusiness",
+            "name": "RH Global Innovation Nig Ltd",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot 34 Block 8c FGHS Pipeline Aboru",
+                "addressLocality": "Iyana Ipaja",
+                "addressRegion": "Lagos",
+                "addressCountry": "Nigeria"
+            },
+            "telephone": ["+234 808 7504 954", "+234 813 5559 872"],
+            "email": ["info@rhglobal.ng", "jobs@rhglobal.ng"]
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Construction Projects",
+            "numberOfItems": 9,
+            "itemListElement": [
+                {
+                    "@type": "CreativeWork",
+                    "name": "Modern Residential Complex",
+                    "description": "Complete structural construction with modern architectural design",
+                    "image": "https://rhglobal.ng/assets/images/website images, videos/3-scaled.jpg"
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Luxury Interior Design",
+                    "description": "Premium interior design project featuring elegant furniture selection",
+                    "image": "https://rhglobal.ng/assets/images/website images, videos/DSC_8019-scaled.jpg"
+                }
+            ]
+        }
+    }
+    </script>
+</body>
+</html>
