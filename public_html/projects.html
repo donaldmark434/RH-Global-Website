@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RH Global Innovation Nig Ltd Projects - View our construction and design portfolio. Quality buildings, interior design, and specialized construction projects across Nigeria.">
+    <meta name="keywords" content="construction projects, design portfolio, Nigeria buildings, RH Global projects, Lagos construction">
+    <meta name="author" content="RH Global Innovation Nig Ltd">
+    
+    <title>Our Projects - RH Global Innovation Nig Ltd</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/rsmenu-main.css">
+    <link rel="stylesheet" href="assets/css/rs-spacing.css">
+    <link rel="stylesheet" href="assets/css/off-canvas.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom Dark Theme Styles -->
+    <style>
+        /* Dark Theme Core Variables */
+        :root {
+            --primary-orange: #FF8C00;
+            --secondary-navy: #1B365D;
+            --background-dark: #0A0A0A;
+            --background-darker: #111111;
+            --text-white: #FFFFFF;
+            --text-light: #DDDDDD;
+            --text-gray: #999999;
+        }
+        
+        /* Global Dark Theme */
+        body {
+            font-family: 'Poppins', 'Open Sans', 'Roboto', Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Segoe UI', 'Helvetica Neue', sans-serif;
+            color: var(--text-white);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+        h3 { font-size: clamp(1.3rem, 3vw, 1.75rem); }
+        
+        /* Header/Navigation */
+        .header-area {
+            background-color: var(--background-darker);
+            border-bottom: 1px solid var(--secondary-navy);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar {
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand img {
+            max-height: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin: 0 0.75rem;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-orange) !important;
+            background-color: rgba(255, 140, 0, 0.1);
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: var(--text-white);
+        }
+        
+        /* Page Header */
+        .page-header {
+            min-height: 50vh;
+            background: linear-gradient(135deg, var(--background-darker) 0%, var(--secondary-navy) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: 70px;
+        }
+        
+        .page-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+        
+        .page-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-light);
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+            background-color: var(--background-dark);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-btn {
+            background-color: var(--background-darker);
+            border: 2px solid var(--secondary-navy);
+            color: var(--text-light);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        
+        /* Project Cards */
+        .project-card {
+            background-color: var(--background-darker);
+            border: 1px solid var(--secondary-navy);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-orange);
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.2);
+        }
+        
+        .project-image {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(27, 54, 93, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .view-project-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            background-color: white;
+            color: var(--primary-orange);
+            transform: scale(1.05);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-category {
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-title {
+            color: var(--text-white);
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+        
+        .project-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        
+        /* Statistics Section */
+        .stats-section {
+            background-color: var(--background-darker);
+            padding: 3rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-orange);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        
+        /* Load More Button */
+        .load-more-section {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .load-more-btn {
+            background-color: var(--primary-orange);
+            border: 2px solid var(--primary-orange);
+            color: white;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .load-more-btn:hover {
+            background-color: transparent;
+            color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--background-darker);
+            border-top: 1px solid var(--secondary-navy);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer h5 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .footer p,
+        .footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-navy);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--secondary-navy);
+            color: var(--text-gray);
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-orange);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1001;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .loading i {
+            font-size: 2rem;
+            color: var(--primary-orange);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Hide/Show for filters */
+        .project-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="header-area" role="banner">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="RH Global Innovation - Home">
+                    <img src="assets/images/logo/logo-white.png" alt="RH Global Innovation Logo" loading="eager">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="index.html" role="menuitem">Home</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="about.html" role="menuitem">About</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="services.html" role="menuitem">Services</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link active" href="projects.html" role="menuitem" aria-current="page">Projects</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="blog.html" role="menuitem">Blog</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 id="page-title" class="page-title wow fadeInLeft" data-wow-delay="0.2s">Our Projects</h1>
+                        <p class="page-subtitle wow fadeInLeft" data-wow-delay="0.4s">Explore our comprehensive portfolio of construction and design achievements across Nigeria</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="section" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 id="portfolio-title">Project Portfolio</h2>
+                    <p>Browse our completed projects by category or view all our work</p>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons wow fadeInUp" data-wow-delay="0.3s">
+                    <button class="filter-btn active" data-filter="*" aria-label="Show all projects">All Projects</button>
+                    <button class="filter-btn" data-filter=".construction" aria-label="Show construction projects">Construction</button>
+                    <button class="filter-btn" data-filter=".interior" aria-label="Show interior design projects">Interior Design</button>
+                    <button class="filter-btn" data-filter=".exterior" aria-label="Show exterior design projects">Exterior Design</button>
+                    <button class="filter-btn" data-filter=".specialized" aria-label="Show specialized projects">Specialized</button>
+                </div>
+                
+                <!-- Portfolio Grid -->
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card construction wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/1-scaled.jpg" alt="Modern residential construction project" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Construction</div>
+                            <h3 class="project-title">Modern Residential Complex</h3>
+                            <p class="project-description">Complete construction of luxury residential complex with modern amenities and energy-efficient design.</p>
+                            <div class="project-meta">
+                                <span>Lagos, Nigeria</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="project-card interior wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/3-scaled.jpg" alt="Interior design project" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Interior Design</div>
+                            <h3 class="project-title">Executive Office Interior</h3>
+                            <p class="project-description">Luxury interior design for corporate headquarters with modern furniture and innovative lighting solutions.</p>
+                            <div class="project-meta">
+                                <span>Abuja, Nigeria</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 3 -->
+                    <article class="project-card construction wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/5-scaled.jpg" alt="Commercial building construction" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Construction</div>
+                            <h3 class="project-title">Commercial Plaza</h3>
+                            <p class="project-description">Multi-story commercial plaza with retail spaces, offices, and parking facilities.</p>
+                            <div class="project-meta">
+                                <span>Victoria Island, Lagos</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 4 -->
+                    <article class="project-card exterior wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/7-scaled.jpg" alt="Exterior renovation project" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Exterior Design</div>
+                            <h3 class="project-title">Building Facade Renovation</h3>
+                            <p class="project-description">Complete exterior renovation with modern facade design and landscaping improvements.</p>
+                            <div class="project-meta">
+                                <span>Ikeja, Lagos</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 5 -->
+                    <article class="project-card specialized wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/DSC_8011-scaled.jpg" alt="Specialized construction services" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Specialized</div>
+                            <h3 class="project-title">Industrial Facility</h3>
+                            <p class="project-description">Specialized construction for industrial facility with custom stucco applications and aluminum installations.</p>
+                            <div class="project-meta">
+                                <span>Lekki, Lagos</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 6 -->
+                    <article class="project-card construction wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/DSC_8014-scaled.jpg" alt="Residential construction project" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Construction</div>
+                            <h3 class="project-title">Family Residence</h3>
+                            <p class="project-description">Custom-built family home with modern amenities and sustainable construction practices.</p>
+                            <div class="project-meta">
+                                <span>Ajah, Lagos</span>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 7 -->
+                    <article class="project-card interior wow fadeInUp" data-wow-delay="1.0s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/istockphoto-1384357158-612x612-1.jpg" alt="Restaurant interior design" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Interior Design</div>
+                            <h3 class="project-title">Restaurant Interior</h3>
+                            <p class="project-description">Contemporary restaurant design with custom furniture and atmospheric lighting.</p>
+                            <div class="project-meta">
+                                <span>Surulere, Lagos</span>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 8 -->
+                    <article class="project-card specialized wow fadeInUp" data-wow-delay="1.1s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/istockphoto-1491423161-612x612-1.jpg" alt="Specialized finishing work" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Specialized</div>
+                            <h3 class="project-title">Luxury Finishing</h3>
+                            <p class="project-description">High-end finishing work including POP installations, specialized painting, and custom tile work.</p>
+                            <div class="project-meta">
+                                <span>Ikoyi, Lagos</span>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 9 -->
+                    <article class="project-card exterior wow fadeInUp" data-wow-delay="1.2s">
+                        <div class="project-image">
+                            <img src="assets/images/website images, videos/PPE-in-construction.jpg" alt="Safety-focused construction project" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="#" class="view-project-btn popup-gallery" aria-label="View project details">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Exterior Design</div>
+                            <h3 class="project-title">Safety-Compliant Building</h3>
+                            <p class="project-description">Construction project emphasizing safety standards and compliance with modern building codes.</p>
+                            <div class="project-meta">
+                                <span>Mainland, Lagos</span>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Load More Section -->
+                <div class="load-more-section wow fadeInUp" data-wow-delay="1.3s">
+                    <button class="load-more-btn" onclick="loadMoreProjects()" aria-label="Load more projects">
+                        <i class="fa fa-plus me-2"></i>Load More Projects
+                    </button>
+                </div>
+                
+                <!-- Loading State -->
+                <div class="loading" id="loading">
+                    <i class="fa fa-spinner"></i>
+                    <p>Loading more projects...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Statistics -->
+        <section class="stats-section" aria-labelledby="stats-title">
+            <div class="container">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 id="stats-title">Project Achievements</h2>
+                    <p>Our track record of successful project delivery</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item wow fadeInUp" data-wow-delay="0.3s">
+                            <span class="stat-number counter" data-count="150">0</span>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item wow fadeInUp" data-wow-delay="0.4s">
+                            <span class="stat-number counter" data-count="200">0</span>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item wow fadeInUp" data-wow-delay="0.5s">
+                            <span class="stat-number counter" data-count="8">0</span>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item wow fadeInUp" data-wow-delay="0.6s">
+                            <span class="stat-number counter" data-count="50">0</span>
+                            <div class="stat-label">Expert Team</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <img src="assets/images/logo/footer-logo.png" alt="RH Global Innovation Logo" class="mb-3" style="max-height: 60px;">
+                        <p>Transforming visions into reality with affordable, quality construction solutions across Nigeria.</p>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Follow us on Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" aria-label="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="Connect with us on LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="services.html#construction">Building Construction</a></li>
+                            <li><a href="services.html#design">Interior Design</a></li>
+                            <li><a href="services.html#exterior">Exterior Design</a></li>
+                            <li><a href="services.html#specialized">Specialized Services</a></li>
+                            <li><a href="services.html#finishing">Finishing Works</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Contact Info</h5>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-map-marker me-2"></i>
+                            <span>Plot 34 Block 8c FGHS Pipeline Aboru, Iyana Ipaja, Lagos, Nigeria</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 808 7504 954</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 813 5559 872</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>info@rhglobal.ng</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>jobs@rhglobal.ng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 RH Global Innovation Nig Ltd. All rights reserved. | Website: <a href="https://rhglobal.ng">rhglobal.ng</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348087504954" class="whatsapp-float" target="_blank" rel="noopener" 
+       aria-label="Contact us on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+        
+        // Portfolio Filter Functionality
+        $(document).ready(function() {
+            // Initialize portfolio
+            var $grid = $('.portfolio-grid').isotope({
+                itemSelector: '.project-card',
+                layoutMode: 'fitRows',
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            
+            // Filter buttons
+            $('.filter-btn').on('click', function() {
+                var filterValue = $(this).attr('data-filter');
+                
+                // Update active state
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                // Filter items
+                $grid.isotope({ filter: filterValue });
+                
+                // Update aria-pressed for accessibility
+                $('.filter-btn').attr('aria-pressed', 'false');
+                $(this).attr('aria-pressed', 'true');
+            });
+            
+            // Magnific Popup for project gallery
+            $('.popup-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300
+                }
+            });
+        });
+        
+        // Counter Animation
+        $('.counter').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            
+            $({ countNum: $this.text()}).animate({
+                countNum: countTo
+            }, {
+                duration: 3000,
+                easing: 'swing',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                    $this.text(this.countNum);
+                }
+            });
+        });
+        
+        // Load More Projects Functionality
+        function loadMoreProjects() {
+            const loading = document.getElementById('loading');
+            const grid = document.getElementById('portfolio-grid');
+            
+            // Show loading state
+            loading.style.display = 'block';
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                // Hide loading state
+                loading.style.display = 'none';
+                
+                // Here you would typically load more projects from an API
+                // For this demo, we'll show a message
+                alert('All projects have been loaded. Contact us for more information about our recent work!');
+            }, 2000);
+        }
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-area');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(17, 17, 17, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'var(--background-darker)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+        
+        // Error Handling for Images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                console.error('Failed to load image:', this.src);
+            });
+        });
+        
+        // Performance: Lazy Load Implementation
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
