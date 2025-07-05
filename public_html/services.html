@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RH Global Innovation services - Building construction, interior design, exterior design, and specialized construction services in Lagos, Nigeria.">
+    <meta name="keywords" content="construction services, building construction, interior design, exterior design, Lagos construction, specialized services">
+    <meta name="author" content="RH Global Innovation Nig Ltd">
+    
+    <title>Our Services - RH Global Innovation Nig Ltd</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/rsmenu-main.css">
+    <link rel="stylesheet" href="assets/css/rs-spacing.css">
+    <link rel="stylesheet" href="assets/css/off-canvas.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom Dark Theme Styles -->
+    <style>
+        /* Core Variables and Base Styles */
+        :root {
+            --primary-orange: #FF8C00;
+            --secondary-navy: #1B365D;
+            --background-dark: #0A0A0A;
+            --background-darker: #111111;
+            --text-white: #FFFFFF;
+            --text-light: #DDDDDD;
+            --text-gray: #999999;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Open Sans', 'Roboto', Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Segoe UI', 'Helvetica Neue', sans-serif;
+            color: var(--text-white);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+        h3 { font-size: clamp(1.3rem, 3vw, 1.75rem); }
+        h4 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
+        h5 { font-size: clamp(1rem, 2vw, 1.25rem); }
+        h6 { font-size: clamp(0.9rem, 1.8vw, 1.1rem); }
+        
+        @media (max-width: 768px) {
+            body { font-size: clamp(0.65rem, 2vw, 0.75rem); }
+            h1, h2, h3, h4, h5, h6 { margin-bottom: 0.75rem; }
+        }
+        
+        @media (max-width: 375px) {
+            body { font-size: clamp(0.6rem, 2.2vw, 0.65rem); }
+        }
+        
+        /* Header Styles */
+        .header-area {
+            background-color: var(--background-darker);
+            border-bottom: 1px solid var(--secondary-navy);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .header-area { height: 80%; }
+        }
+        
+        @media (max-width: 375px) {
+            .header-area { height: 60%; }
+        }
+        
+        .navbar {
+            padding: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar { padding: 0.7rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar { padding: 0.5rem 0; }
+        }
+        
+        .navbar-brand img {
+            max-height: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand img { max-height: 40px; }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar-brand img { max-height: 35px; }
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin: 0 0.75rem;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                margin: 0 0.5rem;
+                padding: 0.4rem 0.8rem !important;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar-nav .nav-link {
+                margin: 0 0.25rem;
+                padding: 0.3rem 0.6rem !important;
+                font-size: 0.75rem;
+            }
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-orange) !important;
+            background-color: rgba(255, 140, 0, 0.1);
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: var(--text-white);
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--background-darker) 0%, var(--secondary-navy) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header { padding: 6rem 0 3rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .page-header { padding: 5rem 0 2rem; }
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/website\ images,\ videos/istockphoto-1384357158-612x612-1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-light);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+            background-color: var(--background-dark);
+        }
+        
+        @media (max-width: 768px) {
+            .section { padding: 3rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .section { padding: 2rem 0; }
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title { margin-bottom: 2rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .section-title { margin-bottom: 1.5rem; }
+        }
+        
+        .section-title h2 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Service Category Cards */
+        .service-category {
+            background-color: var(--background-darker);
+            border: 1px solid var(--secondary-navy);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-category { margin-bottom: 2rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .service-category { margin-bottom: 1.5rem; }
+        }
+        
+        .service-category:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-orange);
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.2);
+        }
+        
+        .service-header {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-navy) 100%);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .service-header { padding: 1.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .service-header { padding: 1rem; }
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-icon { font-size: 2.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .service-icon { font-size: 2rem; }
+        }
+        
+        .service-header h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-subtitle {
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .service-content {
+            padding: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-content { padding: 1.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .service-content { padding: 1rem; }
+        }
+        
+        .service-description {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        
+        .feature-item {
+            background-color: var(--background-dark);
+            border: 1px solid var(--secondary-navy);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .feature-item { padding: 1rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .feature-item { padding: 0.75rem; }
+        }
+        
+        .feature-item:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        
+        .feature-item h5 {
+            color: var(--primary-orange);
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-item p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Service List Items */
+        .service-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-list { grid-template-columns: 1fr; }
+        }
+        
+        .service-list li {
+            color: var(--text-light);
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-list li:before {
+            content: "✓";
+            color: var(--primary-orange);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Image Gallery */
+        .service-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .service-gallery {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item img { height: 100px; }
+        }
+        
+        @media (max-width: 375px) {
+            .gallery-item img { height: 80px; }
+        }
+        
+        .gallery-item:hover img {
+            filter: brightness(1.2);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-navy) 0%, var(--primary-orange) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .cta-section { padding: 3rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .cta-section { padding: 2rem 0; }
+        }
+        
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-content p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .btn-white {
+            background-color: white;
+            border: 2px solid white;
+            color: var(--secondary-navy);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .btn-white { padding: 0.6rem 1.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .btn-white { padding: 0.5rem 1.2rem; }
+        }
+        
+        .btn-white:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-white {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .btn-outline-white {
+                padding: 0.6rem 1.5rem;
+                margin-left: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .btn-outline-white {
+                padding: 0.5rem 1.2rem;
+                margin-left: 0.5rem;
+                margin-top: 0.5rem;
+            }
+        }
+        
+        .btn-outline-white:hover {
+            background-color: white;
+            color: var(--secondary-navy);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--background-darker);
+            border-top: 1px solid var(--secondary-navy);
+            padding: 3rem 0 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer { padding: 2rem 0 1rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .footer { padding: 1.5rem 0 1rem; }
+        }
+        
+        .footer h5 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .footer p,
+        .footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-navy);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .social-links a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .social-links a {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--secondary-navy);
+            color: var(--text-gray);
+        }
+        
+        @media (max-width: 768px) {
+            .copyright { padding-top: 1.5rem; margin-top: 1.5rem; }
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float i { font-size: 1.3rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .whatsapp-float i { font-size: 1.1rem; }
+        }
+        
+        /* Accessibility Focus States */
+        *:focus {
+            outline: 2px solid var(--primary-orange);
+            outline-offset: 2px;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-orange);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1001;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Ensure minimum tap target size on mobile */
+        @media (max-width: 768px) {
+            .btn, .nav-link, .whatsapp-float {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="header-area" role="banner">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="RH Global Innovation - Home">
+                    <img src="assets/images/logo/logo-white.png" alt="RH Global Innovation Logo" loading="eager">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="index.html" role="menuitem">Home</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="about.html" role="menuitem">About</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link active" href="services.html" role="menuitem" aria-current="page">Services</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="projects.html" role="menuitem">Projects</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="blog.html" role="menuitem">Blog</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title" class="page-title">Our Services</h1>
+                <p class="page-subtitle">Comprehensive construction and design solutions tailored to meet your unique needs and budget</p>
+            </div>
+        </section>
+        
+        <!-- Building Construction Section -->
+        <section id="construction" class="section" aria-labelledby="construction-title">
+            <div class="container">
+                <div class="service-category wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fa fa-building"></i>
+                        </div>
+                        <h3 id="construction-title">Building Construction & Finishing</h3>
+                        <p class="service-subtitle">Complete structural solutions from foundation to finishing</p>
+                    </div>
+                    
+                    <div class="service-content">
+                        <div class="service-description">
+                            <p>Our building construction services encompass every aspect of creating exceptional structures. From initial planning and foundation work to the final finishing touches, we deliver comprehensive construction solutions that meet the highest standards of quality, safety, and durability.</p>
+                            <p>With years of experience in residential and commercial construction, our team combines traditional craftsmanship with modern techniques to bring your vision to life within your budget and timeline.</p>
+                        </div>
+                        
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <h5>Structural Engineering</h5>
+                                <p>Complete structural design and engineering services ensuring safety, durability, and compliance with all building codes and regulations.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Electrical & Plumbing</h5>
+                                <p>Professional electrical and plumbing installations with modern fixtures, energy-efficient systems, and reliable performance.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>POP Installations</h5>
+                                <p>Expert Plaster of Paris ceiling work, decorative elements, and architectural features that enhance your space's aesthetic appeal.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Tiling & Flooring</h5>
+                                <p>Professional tiling services using premium materials for floors, walls, and decorative surfaces with precision installation.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Project Management</h5>
+                                <p>Comprehensive project coordination ensuring timely completion, quality control, and seamless communication throughout the process.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Quality Assurance</h5>
+                                <p>Rigorous quality control measures at every stage of construction to ensure exceptional results and long-lasting durability.</p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="color: var(--primary-orange); margin-bottom: 1rem;">Construction Services Include:</h4>
+                        <ul class="service-list">
+                            <li>Foundation and footings</li>
+                            <li>Concrete work and masonry</li>
+                            <li>Roofing and waterproofing</li>
+                            <li>Framing and structural work</li>
+                            <li>Electrical wiring and systems</li>
+                            <li>Plumbing and drainage</li>
+                            <li>HVAC installation</li>
+                            <li>Insulation and ventilation</li>
+                            <li>Drywall and plastering</li>
+                            <li>Painting and finishes</li>
+                            <li>Flooring installation</li>
+                            <li>Door and window installation</li>
+                        </ul>
+                        
+                        <div class="service-gallery">
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/1-scaled.jpg" alt="Building construction project" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/3-scaled.jpg" alt="Structural work in progress" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/DSC_8011-scaled.jpg" alt="Construction site management" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/DSC_8015-scaled.jpg" alt="Building finishing work" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interior & Exterior Design Section -->
+        <section id="design" class="section" style="background-color: var(--background-darker);" aria-labelledby="design-title">
+            <div class="container">
+                <div class="service-category wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fa fa-paint-brush"></i>
+                        </div>
+                        <h3 id="design-title">Interior & Exterior Design Solutions</h3>
+                        <p class="service-subtitle">Transform spaces with creative design and innovative solutions</p>
+                    </div>
+                    
+                    <div class="service-content">
+                        <div class="service-description">
+                            <p>Our design team specializes in creating beautiful, functional spaces that reflect your personality and lifestyle. Whether it's a complete interior makeover or an exterior transformation, we combine aesthetic appeal with practical functionality to deliver stunning results.</p>
+                            <p>From concept development to final implementation, we work closely with clients to understand their vision and translate it into reality through innovative design solutions and careful attention to detail.</p>
+                        </div>
+                        
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <h5>Interior Design</h5>
+                                <p>Complete interior space planning, color schemes, lighting design, and furniture selection to create harmonious living environments.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Creative Furniture Selection</h5>
+                                <p>Expert curation of furniture pieces that complement your space, lifestyle, and budget while maximizing functionality and style.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Floor Stamping</h5>
+                                <p>Innovative decorative concrete techniques creating unique patterns and textures for distinctive and durable flooring solutions.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Facade Renovation</h5>
+                                <p>Exterior building face-lifts using modern materials and design principles to enhance curb appeal and property value.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Space Transformation</h5>
+                                <p>Complete redesign and optimization of existing spaces to improve functionality, flow, and aesthetic appeal.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Color Consultation</h5>
+                                <p>Professional color selection and coordination to create cohesive, visually appealing environments that reflect your taste.</p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="color: var(--primary-orange); margin-bottom: 1rem;">Design Services Include:</h4>
+                        <ul class="service-list">
+                            <li>Space planning and layout</li>
+                            <li>Color scheme development</li>
+                            <li>Lighting design and installation</li>
+                            <li>Furniture selection and placement</li>
+                            <li>Window treatments and drapery</li>
+                            <li>Decorative elements and accessories</li>
+                            <li>Kitchen and bathroom design</li>
+                            <li>Bedroom and living area styling</li>
+                            <li>Exterior landscaping design</li>
+                            <li>Outdoor living space creation</li>
+                            <li>Architectural feature enhancement</li>
+                            <li>Material and finish selection</li>
+                        </ul>
+                        
+                        <div class="service-gallery">
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/5-scaled.jpg" alt="Interior design project" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/7-scaled.jpg" alt="Modern interior space" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/DSC_8023-scaled.jpg" alt="Design consultation" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/DSC_8030-scaled.jpg" alt="Exterior design work" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Specialized Services Section -->
+        <section id="specialized" class="section" aria-labelledby="specialized-title">
+            <div class="container">
+                <div class="service-category wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <h3 id="specialized-title">Specialized Construction Services</h3>
+                        <p class="service-subtitle">Expert solutions for unique construction challenges</p>
+                    </div>
+                    
+                    <div class="service-content">
+                        <div class="service-description">
+                            <p>Our specialized services address unique construction needs that require expert knowledge, specialized equipment, and refined techniques. These services complement our core offerings and provide comprehensive solutions for complex projects.</p>
+                            <p>With specialized training and experience, our team delivers professional results for challenging projects that demand precision, expertise, and attention to detail.</p>
+                        </div>
+                        
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <h5>Industrial Cleaning</h5>
+                                <p>Professional cleaning services for construction sites, industrial facilities, and post-construction cleanup with specialized equipment.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Stucco Application</h5>
+                                <p>Expert stucco installation and repair services creating durable, weather-resistant exterior finishes with architectural appeal.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Graphitex Painting</h5>
+                                <p>Professional application of Graphitex and other specialized coating systems for enhanced durability and aesthetic finish.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Aluminum Windows</h5>
+                                <p>Installation of high-quality aluminum window systems offering durability, energy efficiency, and modern aesthetic appeal.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Waterproofing Solutions</h5>
+                                <p>Advanced waterproofing techniques and materials to protect structures from moisture damage and ensure longevity.</p>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <h5>Restoration Services</h5>
+                                <p>Specialized restoration and rehabilitation of existing structures to restore functionality and aesthetic appeal.</p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="color: var(--primary-orange); margin-bottom: 1rem;">Specialized Services Include:</h4>
+                        <ul class="service-list">
+                            <li>Post-construction cleanup</li>
+                            <li>Industrial facility maintenance</li>
+                            <li>Pressure washing services</li>
+                            <li>Stucco repair and restoration</li>
+                            <li>Decorative coating application</li>
+                            <li>Specialty paint systems</li>
+                            <li>Custom aluminum fabrication</li>
+                            <li>Energy-efficient window solutions</li>
+                            <li>Basement waterproofing</li>
+                            <li>Roof waterproofing systems</li>
+                            <li>Foundation repair and sealing</li>
+                            <li>Historic building restoration</li>
+                        </ul>
+                        
+                        <div class="service-gallery">
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/8-scaled.jpg" alt="Specialized construction service" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/10-scaled.jpg" alt="Professional cleaning service" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/DSC_8039-scaled.jpg" alt="Window installation project" loading="lazy">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="assets/images/website images, videos/DSC_8056-scaled.jpg" alt="Specialized finishing work" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 id="cta-title">Ready to Transform Your Vision into Reality?</h2>
+                    <p>Contact us today for a free consultation and detailed quote. Our expert team is ready to help you achieve your construction and design goals with quality, affordability, and 100% satisfaction guarantee.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn-white" aria-label="Get a free quote">Get Free Quote</a>
+                        <a href="projects.html" class="btn-outline-white" aria-label="View our portfolio">View Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <img src="assets/images/logo/footer-logo.png" alt="RH Global Innovation Logo" class="mb-3" style="max-height: 60px;">
+                        <p>Transforming visions into reality with affordable, quality construction solutions across Nigeria.</p>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Follow us on Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" aria-label="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="Connect with us on LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#construction">Building Construction</a></li>
+                            <li><a href="#design">Interior Design</a></li>
+                            <li><a href="#design">Exterior Design</a></li>
+                            <li><a href="#specialized">Specialized Services</a></li>
+                            <li><a href="#construction">Finishing Works</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Contact Info</h5>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-map-marker me-2"></i>
+                            <span>Plot 34 Block 8c FGHS Pipeline Aboru, Iyana Ipaja, Lagos, Nigeria</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 808 7504 954</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 813 5559 872</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>info@rhglobal.ng</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>jobs@rhglobal.ng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 RH Global Innovation Nig Ltd. All rights reserved. | Website: <a href="https://rhglobal.ng">rhglobal.ng</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348087504954" class="whatsapp-float" target="_blank" rel="noopener" 
+       aria-label="Contact us on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+        
+        // Magnific Popup for Gallery
+        $(document).ready(function() {
+            $('.gallery-item').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300
+                }
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header-area').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-area');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(17, 17, 17, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'var(--background-darker)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+        
+        // Service Category Hover Effects
+        document.querySelectorAll('.service-category').forEach(category => {
+            category.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            category.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Error Handling for Images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                console.error('Failed to load image:', this.src);
+            });
+        });
+        
+        // Performance: Lazy Load Implementation
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
