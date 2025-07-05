@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RH Global Innovation Nig Ltd - Premier construction and design company in Lagos, Nigeria. Quality buildings, interior design, and specialized construction services.">
+    <meta name="keywords" content="construction, design, finishing, interior, Nigeria, RH Global, Lagos, building">
+    <meta name="author" content="RH Global Innovation Nig Ltd">
+    
+    <title>RH Global Innovation Nig Ltd - Building Excellence in Lagos</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/rsmenu-main.css">
+    <link rel="stylesheet" href="assets/css/rs-spacing.css">
+    <link rel="stylesheet" href="assets/css/off-canvas.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom Dark Theme Styles -->
+    <style>
+        /* Dark Theme Core Variables */
+        :root {
+            --primary-orange: #FF8C00;
+            --secondary-navy: #1B365D;
+            --background-dark: #0A0A0A;
+            --background-darker: #111111;
+            --text-white: #FFFFFF;
+            --text-light: #DDDDDD;
+            --text-gray: #999999;
+        }
+        
+        /* Global Dark Theme */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Open Sans', 'Roboto', Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Segoe UI', 'Helvetica Neue', sans-serif;
+            color: var(--text-white);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+        h3 { font-size: clamp(1.3rem, 3vw, 1.75rem); }
+        h4 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
+        h5 { font-size: clamp(1rem, 2vw, 1.25rem); }
+        h6 { font-size: clamp(0.9rem, 1.8vw, 1.1rem); }
+        
+        /* Responsive Typography Scaling */
+        @media (max-width: 768px) {
+            body { font-size: clamp(0.65rem, 2vw, 0.75rem); }
+            h1, h2, h3, h4, h5, h6 { margin-bottom: 0.75rem; }
+        }
+        
+        @media (max-width: 375px) {
+            body { font-size: clamp(0.6rem, 2.2vw, 0.65rem); }
+        }
+        
+        /* Header/Navigation */
+        .header-area {
+            background-color: var(--background-darker);
+            border-bottom: 1px solid var(--secondary-navy);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .header-area { height: 80%; }
+        }
+        
+        @media (max-width: 375px) {
+            .header-area { height: 60%; }
+        }
+        
+        .navbar {
+            padding: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar { padding: 0.7rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar { padding: 0.5rem 0; }
+        }
+        
+        .navbar-brand img {
+            max-height: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand img { max-height: 40px; }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar-brand img { max-height: 35px; }
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin: 0 0.75rem;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                margin: 0 0.5rem;
+                padding: 0.4rem 0.8rem !important;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar-nav .nav-link {
+                margin: 0 0.25rem;
+                padding: 0.3rem 0.6rem !important;
+                font-size: 0.75rem;
+            }
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-orange) !important;
+            background-color: rgba(255, 140, 0, 0.1);
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: var(--text-white);
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--background-darker) 0%, var(--secondary-navy) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content { padding: 1.5rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .hero-content { padding: 1rem 0; }
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-white);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-orange);
+            border: 2px solid var(--primary-orange);
+            color: white;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .btn-primary-custom { padding: 0.6rem 1.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .btn-primary-custom { padding: 0.5rem 1.2rem; }
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: transparent;
+            color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary-custom {
+            background-color: transparent;
+            border: 2px solid var(--text-light);
+            color: var(--text-light);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .btn-secondary-custom {
+                padding: 0.6rem 1.5rem;
+                margin-left: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .btn-secondary-custom {
+                padding: 0.5rem 1.2rem;
+                margin-left: 0.5rem;
+                margin-top: 0.5rem;
+            }
+        }
+        
+        .btn-secondary-custom:hover {
+            background-color: var(--text-light);
+            color: var(--background-dark);
+        }
+        
+        /* Hero Background Animation */
+        .hero-bg-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/website\ images,\ videos/about-rh-global.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+            background-color: var(--background-dark);
+        }
+        
+        @media (max-width: 768px) {
+            .section { padding: 3rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .section { padding: 2rem 0; }
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title { margin-bottom: 2rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .section-title { margin-bottom: 1.5rem; }
+        }
+        
+        .section-title h2 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Service Cards */
+        .service-card {
+            background-color: var(--background-darker);
+            border: 1px solid var(--secondary-navy);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-card { padding: 1.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .service-card { padding: 1rem; }
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-orange);
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-icon { font-size: 2.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .service-icon { font-size: 2rem; }
+        }
+        
+        .service-card h3 {
+            color: var(--text-white);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Company Overview */
+        .company-overview {
+            background-color: var(--background-darker);
+        }
+        
+        .overview-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .overview-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+        
+        .overview-text h2 {
+            color: var(--primary-orange);
+            margin-bottom: 1.5rem;
+        }
+        
+        .overview-text p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .overview-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .overview-features li {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .overview-features li:before {
+            content: "✓";
+            color: var(--primary-orange);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .overview-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Projects Carousel */
+        .projects-carousel .owl-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-carousel .owl-item img { height: 200px; }
+        }
+        
+        @media (max-width: 375px) {
+            .projects-carousel .owl-item img { height: 150px; }
+        }
+        
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 0 0.5rem;
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(27, 54, 93, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .project-info {
+            text-align: center;
+            color: white;
+        }
+        
+        .project-info h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background-color: var(--background-darker);
+            border: 1px solid var(--secondary-navy);
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-question {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-question { padding: 0.75rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .faq-question { padding: 0.5rem; }
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(255, 140, 0, 0.1);
+        }
+        
+        .faq-question h5 {
+            color: var(--text-white);
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .faq-icon {
+            color: var(--primary-orange);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 1rem 1rem;
+            color: var(--text-light);
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-answer { padding: 0 0.75rem 0.75rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .faq-answer { padding: 0 0.5rem 0.5rem; }
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--background-darker);
+            border-top: 1px solid var(--secondary-navy);
+            padding: 3rem 0 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer { padding: 2rem 0 1rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .footer { padding: 1.5rem 0 1rem; }
+        }
+        
+        .footer h5 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .footer p,
+        .footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-navy);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .social-links a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .social-links a {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--secondary-navy);
+            color: var(--text-gray);
+        }
+        
+        @media (max-width: 768px) {
+            .copyright { padding-top: 1.5rem; margin-top: 1.5rem; }
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float i { font-size: 1.3rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .whatsapp-float i { font-size: 1.1rem; }
+        }
+        
+        /* Blog Preview Cards */
+        .blog-card {
+            background-color: var(--background-darker);
+            border: 1px solid var(--secondary-navy);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-orange);
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-card img { height: 150px; }
+        }
+        
+        @media (max-width: 375px) {
+            .blog-card img { height: 120px; }
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-content { padding: 1rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .blog-content { padding: 0.75rem; }
+        }
+        
+        .blog-date {
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-card h4 {
+            color: var(--text-white);
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--text-white);
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .loading i {
+            font-size: 2rem;
+            color: var(--primary-orange);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Accessibility Focus States */
+        *:focus {
+            outline: 2px solid var(--primary-orange);
+            outline-offset: 2px;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-orange);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1001;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Ensure minimum tap target size on mobile */
+        @media (max-width: 768px) {
+            .btn, .nav-link, .faq-question, .whatsapp-float {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="header-area" role="banner">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="RH Global Innovation - Home">
+                    <img src="assets/images/logo/logo-white.png" alt="RH Global Innovation Logo" loading="eager">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a class="nav-link active" href="index.html" role="menuitem" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="about.html" role="menuitem">About</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="services.html" role="menuitem">Services</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="projects.html" role="menuitem">Projects</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="blog.html" role="menuitem">Blog</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-bg-animation"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content wow fadeInLeft" data-wow-delay="0.2s">
+                            <h1 id="hero-title" class="hero-title">Building Excellence in Lagos</h1>
+                            <p class="hero-subtitle">Transform your vision into reality with RH Global Innovation Nig Ltd. We deliver affordable, quality construction solutions across Nigeria.</p>
+                            <div class="hero-buttons">
+                                <a href="services.html" class="btn-primary-custom" aria-label="View our services">Our Services</a>
+                                <a href="contact.html" class="btn-secondary-custom" aria-label="Get a quote">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image wow fadeInRight" data-wow-delay="0.4s">
+                            <img src="assets/images/website images, videos/about-rh-global.png" 
+                                 alt="RH Global construction team working on project" 
+                                 class="img-fluid" loading="eager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Company Overview Section -->
+        <section class="section company-overview" aria-labelledby="overview-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="overview-text wow fadeInLeft" data-wow-delay="0.2s">
+                            <h2 id="overview-title">Leading Construction & Design Company in Nigeria</h2>
+                            <p>RH Global Innovation Nig Ltd is your trusted partner for comprehensive construction and design solutions. Led by CEO Silas Stephen Oyaluna, we bring years of expertise to every project.</p>
+                            <p>Our mission is simple: <strong>Transforming visions into reality with affordable, quality construction solutions.</strong></p>
+                            
+                            <ul class="overview-features">
+                                <li>100% Satisfaction Guarantee</li>
+                                <li>Cost-effective solutions for all budgets</li>
+                                <li>Experienced team of professionals</li>
+                                <li>Quality materials and craftsmanship</li>
+                                <li>Timely project completion</li>
+                            </ul>
+                            
+                            <a href="about.html" class="btn-primary-custom mt-3" aria-label="Learn more about our company">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="overview-image wow fadeInRight" data-wow-delay="0.4s">
+                            <img src="assets/images/website images, videos/about-rh-global2.png" 
+                                 alt="Modern building construction by RH Global" 
+                                 class="img-fluid" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="section" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 id="services-title">Our Core Services</h2>
+                    <p>We offer comprehensive construction and design services to meet all your building needs</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-icon">
+                                <i class="fa fa-building"></i>
+                            </div>
+                            <h3>Building Construction</h3>
+                            <p>Complete structural engineering, electrical and plumbing work, POP installations, tiling, and comprehensive project management for residential and commercial projects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="service-icon">
+                                <i class="fa fa-paint-brush"></i>
+                            </div>
+                            <h3>Interior & Exterior Design</h3>
+                            <p>Creative furniture selection, innovative floor stamping, facade renovation, and complete space transformation to bring your vision to life.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="service-icon">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                            <h3>Specialized Services</h3>
+                            <p>Industrial cleaning, stucco application, Graphitex painting, aluminum window installations, and other specialized construction services.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="services.html" class="btn-primary-custom" aria-label="View all our services">View All Services</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recent Projects Section -->
+        <section class="section" style="background-color: var(--background-darker);" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 id="projects-title">Recent Projects</h2>
+                    <p>Explore our latest construction and design achievements</p>
+                </div>
+                
+                <div class="projects-carousel owl-carousel wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="project-item">
+                        <img src="assets/images/website images, videos/1-scaled.jpg" alt="Modern residential construction project" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h4>Modern Residential Complex</h4>
+                                <p>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <img src="assets/images/website images, videos/3-scaled.jpg" alt="Commercial building construction" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h4>Commercial Building</h4>
+                                <p>Abuja, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <img src="assets/images/website images, videos/5-scaled.jpg" alt="Interior design project" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h4>Luxury Interior Design</h4>
+                                <p>Victoria Island, Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <img src="assets/images/website images, videos/7-scaled.jpg" alt="Renovation project" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h4>Building Renovation</h4>
+                                <p>Ikeja, Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <img src="assets/images/website images, videos/DSC_8011-scaled.jpg" alt="Construction work in progress" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h4>Residential Construction</h4>
+                                <p>Lekki, Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="projects.html" class="btn-primary-custom" aria-label="View all our projects">View All Projects</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Preview Section -->
+        <section class="section" aria-labelledby="blog-title">
+            <div class="container">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 id="blog-title">Latest News & Insights</h2>
+                    <p>Stay updated with the latest trends in construction and design</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card wow fadeInUp" data-wow-delay="0.3s">
+                            <img src="assets/images/website images, videos/PPE-in-construction.jpg" 
+                                 alt="Construction safety equipment" loading="lazy">
+                            <div class="blog-content">
+                                <div class="blog-date">July 2025</div>
+                                <h4>Safety First: Essential PPE in Construction</h4>
+                                <p>Learn about the critical importance of personal protective equipment in modern construction sites and how RH Global prioritizes worker safety.</p>
+                                <a href="blog.html" class="read-more" aria-label="Read more about construction safety">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card wow fadeInUp" data-wow-delay="0.4s">
+                            <img src="assets/images/website images, videos/istockphoto-1491423161-612x612-1.jpg" 
+                                 alt="Modern construction techniques" loading="lazy">
+                            <div class="blog-content">
+                                <div class="blog-date">June 2025</div>
+                                <h4>Modern Construction Techniques in Nigeria</h4>
+                                <p>Exploring innovative building methods and technologies that are transforming the Nigerian construction industry.</p>
+                                <a href="blog.html" class="read-more" aria-label="Read more about modern construction">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card wow fadeInUp" data-wow-delay="0.5s">
+                            <img src="assets/images/website images, videos/istockphoto-1384357158-612x612-1.jpg" 
+                                 alt="Sustainable building design" loading="lazy">
+                            <div class="blog-content">
+                                <div class="blog-date">May 2025</div>
+                                <h4>Sustainable Building Design Trends</h4>
+                                <p>How eco-friendly design principles are shaping the future of construction in Nigeria and creating more sustainable communities.</p>
+                                <a href="blog.html" class="read-more" aria-label="Read more about sustainable design">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="blog.html" class="btn-primary-custom" aria-label="View all blog posts">View All Posts</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" style="background-color: var(--background-darker);" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                    <h2 id="faq-title">Frequently Asked Questions</h2>
+                    <p>Get answers to common questions about our services</p>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="faq-container">
+                            <div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                                    <h5>What types of construction services do you offer?</h5>
+                                    <i class="fa fa-chevron-down faq-icon"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We offer comprehensive construction services including structural engineering, electrical and plumbing work, POP installations, tiling, interior and exterior design, industrial cleaning, stucco application, and aluminum window installations.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                                    <h5>Do you provide cost estimates for projects?</h5>
+                                    <i class="fa fa-chevron-down faq-icon"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes, we provide detailed cost estimates for all projects. Our team conducts thorough assessments to ensure accurate pricing that fits various budgets while maintaining our quality standards.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                                    <h5>How long does a typical construction project take?</h5>
+                                    <i class="fa fa-chevron-down faq-icon"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Project timelines vary depending on scope and complexity. Residential projects typically take 3-12 months, while commercial projects may take 6-24 months. We provide detailed timelines during the initial consultation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                                    <h5>Do you offer warranties on your work?</h5>
+                                    <i class="fa fa-chevron-down faq-icon"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Absolutely! We stand behind our work with a 100% satisfaction guarantee and provide comprehensive warranties on all construction and design projects. Specific warranty terms depend on the type of work performed.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                                    <h5>Can you work within my budget?</h5>
+                                    <i class="fa fa-chevron-down faq-icon"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Yes! We pride ourselves on offering cost-effective solutions for varying budgets. Our team works closely with clients to design and implement projects that meet their financial requirements without compromising on quality.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <img src="assets/images/logo/footer-logo.png" alt="RH Global Innovation Logo" class="mb-3" style="max-height: 60px;">
+                        <p>Transforming visions into reality with affordable, quality construction solutions across Nigeria.</p>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Follow us on Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" aria-label="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="Connect with us on LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="services.html#construction">Building Construction</a></li>
+                            <li><a href="services.html#design">Interior Design</a></li>
+                            <li><a href="services.html#exterior">Exterior Design</a></li>
+                            <li><a href="services.html#specialized">Specialized Services</a></li>
+                            <li><a href="services.html#finishing">Finishing Works</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Contact Info</h5>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-map-marker me-2"></i>
+                            <span>Plot 34 Block 8c FGHS Pipeline Aboru, Iyana Ipaja, Lagos, Nigeria</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 808 7504 954</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 813 5559 872</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>info@rhglobal.ng</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>jobs@rhglobal.ng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 RH Global Innovation Nig Ltd. All rights reserved. | Website: <a href="https://rhglobal.ng">rhglobal.ng</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348087504954" class="whatsapp-float" target="_blank" rel="noopener" 
+       aria-label="Contact us on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+        
+        // FAQ Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+            
+            // Keyboard accessibility
+            question.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+        
+        // Projects Carousel
+        $(document).ready(function() {
+            $('.projects-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 15
+                    },
+                    768: {
+                        items: 2,
+                        margin: 20
+                    },
+                    1024: {
+                        items: 3
+                    }
+                }
+            });
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-area');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(17, 17, 17, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'var(--background-darker)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+        
+        // Loading State Management
+        function showLoading(element) {
+            element.innerHTML = '<div class="loading"><i class="fa fa-spinner"></i><p>Loading...</p></div>';
+        }
+        
+        function hideLoading(element, content) {
+            element.innerHTML = content;
+        }
+        
+        // Error Handling for Images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                console.error('Failed to load image:', this.src);
+            });
+        });
+        
+        // Performance: Lazy Load Implementation
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
