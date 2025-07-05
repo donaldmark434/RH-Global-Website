@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RH Global Innovation blog - Latest news, insights, and trends in construction, design, and building industry in Nigeria.">
+    <meta name="keywords" content="construction blog, building news, design trends, construction tips, Nigeria construction, building industry">
+    <meta name="author" content="RH Global Innovation Nig Ltd">
+    
+    <title>Blog - RH Global Innovation Nig Ltd</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/rsmenu-main.css">
+    <link rel="stylesheet" href="assets/css/rs-spacing.css">
+    <link rel="stylesheet" href="assets/css/off-canvas.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom Dark Theme Styles -->
+    <style>
+        /* Core Variables and Base Styles */
+        :root {
+            --primary-orange: #FF8C00;
+            --secondary-navy: #1B365D;
+            --background-dark: #0A0A0A;
+            --background-darker: #111111;
+            --text-white: #FFFFFF;
+            --text-light: #DDDDDD;
+            --text-gray: #999999;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Open Sans', 'Roboto', Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', 'Segoe UI', 'Helvetica Neue', sans-serif;
+            color: var(--text-white);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+        h3 { font-size: clamp(1.3rem, 3vw, 1.75rem); }
+        h4 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
+        h5 { font-size: clamp(1rem, 2vw, 1.25rem); }
+        h6 { font-size: clamp(0.9rem, 1.8vw, 1.1rem); }
+        
+        @media (max-width: 768px) {
+            body { font-size: clamp(0.65rem, 2vw, 0.75rem); }
+            h1, h2, h3, h4, h5, h6 { margin-bottom: 0.75rem; }
+        }
+        
+        @media (max-width: 375px) {
+            body { font-size: clamp(0.6rem, 2.2vw, 0.65rem); }
+        }
+        
+        /* Header Styles */
+        .header-area {
+            background-color: var(--background-darker);
+            border-bottom: 1px solid var(--secondary-navy);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .header-area { height: 80%; }
+        }
+        
+        @media (max-width: 375px) {
+            .header-area { height: 60%; }
+        }
+        
+        .navbar {
+            padding: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar { padding: 0.7rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar { padding: 0.5rem 0; }
+        }
+        
+        .navbar-brand img {
+            max-height: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand img { max-height: 40px; }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar-brand img { max-height: 35px; }
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin: 0 0.75rem;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                margin: 0 0.5rem;
+                padding: 0.4rem 0.8rem !important;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .navbar-nav .nav-link {
+                margin: 0 0.25rem;
+                padding: 0.3rem 0.6rem !important;
+                font-size: 0.75rem;
+            }
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-orange) !important;
+            background-color: rgba(255, 140, 0, 0.1);
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: var(--text-white);
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--background-darker) 0%, var(--secondary-navy) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header { padding: 6rem 0 3rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .page-header { padding: 5rem 0 2rem; }
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/website\ images,\ videos/istockphoto-1491423161-612x612-1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-light);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+            background-color: var(--background-dark);
+        }
+        
+        @media (max-width: 768px) {
+            .section { padding: 3rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .section { padding: 2rem 0; }
+        }
+        
+        /* Search & Filter Section */
+        .search-filter-section {
+            background-color: var(--background-darker);
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .search-filter-section { padding: 1.5rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .search-filter-section { padding: 1rem 0; }
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .search-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+        
+        .search-input {
+            background-color: var(--background-dark);
+            border: 2px solid var(--secondary-navy);
+            color: var(--text-white);
+            padding: 0.75rem 1rem;
+            border-radius: 25px;
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .search-input { width: 100%; max-width: 300px; }
+        }
+        
+        @media (max-width: 375px) {
+            .search-input { padding: 0.6rem 0.8rem; }
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+        }
+        
+        .search-input::placeholder {
+            color: var(--text-gray);
+        }
+        
+        .category-filter {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .category-filter { gap: 0.25rem; }
+        }
+        
+        .filter-tag {
+            background-color: var(--background-dark);
+            border: 2px solid var(--secondary-navy);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .filter-tag { padding: 0.4rem 0.8rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .filter-tag {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.75rem;
+            }
+        }
+        
+        .filter-tag:hover,
+        .filter-tag.active {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        
+        .blog-card {
+            background-color: var(--background-darker);
+            border: 1px solid var(--secondary-navy);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-orange);
+            box-shadow: 0 15px 40px rgba(255, 140, 0, 0.2);
+        }
+        
+        .blog-image {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-image { height: 180px; }
+        }
+        
+        @media (max-width: 375px) {
+            .blog-image { height: 160px; }
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-content { padding: 1rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .blog-content { padding: 0.75rem; }
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 375px) {
+            .blog-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+        }
+        
+        .blog-date {
+            color: var(--primary-orange);
+            font-weight: 600;
+        }
+        
+        .blog-category {
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .blog-title {
+            color: var(--text-white);
+            margin-bottom: 0.75rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            line-height: 1.4;
+        }
+        
+        .blog-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex: 1;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .blog-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--secondary-navy);
+        }
+        
+        @media (max-width: 375px) {
+            .blog-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+        
+        .read-more {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .read-more:hover {
+            color: var(--text-white);
+        }
+        
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-tag {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            border: 1px solid var(--secondary-navy);
+        }
+        
+        /* Pagination */
+        .pagination-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .pagination-section { margin-top: 2rem; }
+        }
+        
+        .pagination {
+            display: inline-flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .page-btn {
+            background-color: var(--background-darker);
+            border: 2px solid var(--secondary-navy);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .page-btn { padding: 0.4rem 0.8rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .page-btn { padding: 0.3rem 0.6rem; }
+        }
+        
+        .page-btn:hover,
+        .page-btn.active {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: white;
+        }
+        
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Newsletter Section */
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--secondary-navy) 0%, var(--primary-orange) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .newsletter-section { padding: 3rem 0; }
+        }
+        
+        @media (max-width: 375px) {
+            .newsletter-section { padding: 2rem 0; }
+        }
+        
+        .newsletter-content h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter-content p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .newsletter-form {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+        
+        .newsletter-input {
+            background-color: white;
+            border: none;
+            color: var(--background-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            width: 300px;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .newsletter-input { width: 100%; max-width: 300px; }
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        .newsletter-input::placeholder {
+            color: #666;
+        }
+        
+        .btn-newsletter {
+            background-color: var(--background-darker);
+            border: 2px solid white;
+            color: white;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .btn-newsletter { padding: 0.6rem 1.5rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .btn-newsletter { padding: 0.5rem 1.2rem; }
+        }
+        
+        .btn-newsletter:hover {
+            background-color: white;
+            color: var(--background-darker);
+            transform: translateY(-2px);
+        }
+        
+        /* No Results Message */
+        .no-results {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-gray);
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-orange);
+        }
+        
+        .no-results h3 {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--background-darker);
+            border-top: 1px solid var(--secondary-navy);
+            padding: 3rem 0 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer { padding: 2rem 0 1rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .footer { padding: 1.5rem 0 1rem; }
+        }
+        
+        .footer h5 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .footer p,
+        .footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--primary-orange);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-navy);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .social-links a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .social-links a {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--secondary-navy);
+            color: var(--text-gray);
+        }
+        
+        @media (max-width: 768px) {
+            .copyright { padding-top: 1.5rem; margin-top: 1.5rem; }
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float i { font-size: 1.3rem; }
+        }
+        
+        @media (max-width: 375px) {
+            .whatsapp-float i { font-size: 1.1rem; }
+        }
+        
+        /* Accessibility Focus States */
+        *:focus {
+            outline: 2px solid var(--primary-orange);
+            outline-offset: 2px;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-orange);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1001;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Ensure minimum tap target size on mobile */
+        @media (max-width: 768px) {
+            .btn, .nav-link, .filter-tag, .page-btn, .whatsapp-float {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+        
+        /* Hidden for search functionality */
+        .blog-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="header-area" role="banner">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="RH Global Innovation - Home">
+                    <img src="assets/images/logo/logo-white.png" alt="RH Global Innovation Logo" loading="eager">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="index.html" role="menuitem">Home</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="about.html" role="menuitem">About</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="services.html" role="menuitem">Services</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="projects.html" role="menuitem">Projects</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link active" href="blog.html" role="menuitem" aria-current="page">Blog</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title" class="page-title">Construction Insights & News</h1>
+                <p class="page-subtitle">Stay updated with the latest trends, tips, and insights from the construction and design industry</p>
+            </div>
+        </section>
+        
+        <!-- Search & Filter Section -->
+        <section class="search-filter-section" aria-labelledby="search-title">
+            <div class="container">
+                <div class="search-container">
+                    <h2 id="search-title" class="sr-only">Search and filter blog posts</h2>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search articles..." aria-label="Search blog articles">
+                    
+                    <div class="category-filter" role="group" aria-labelledby="filter-title">
+                        <h3 id="filter-title" class="sr-only">Filter by category</h3>
+                        <span class="filter-tag active" data-filter="all" role="button" tabindex="0" aria-pressed="true">All</span>
+                        <span class="filter-tag" data-filter="construction" role="button" tabindex="0" aria-pressed="false">Construction</span>
+                        <span class="filter-tag" data-filter="design" role="button" tabindex="0" aria-pressed="false">Design</span>
+                        <span class="filter-tag" data-filter="tips" role="button" tabindex="0" aria-pressed="false">Tips</span>
+                        <span class="filter-tag" data-filter="trends" role="button" tabindex="0" aria-pressed="false">Trends</span>
+                        <span class="filter-tag" data-filter="safety" role="button" tabindex="0" aria-pressed="false">Safety</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Section -->
+        <section class="section" aria-labelledby="blog-title">
+            <div class="container">
+                <h2 id="blog-title" class="sr-only">Blog articles</h2>
+                
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-card" data-category="safety" data-tags="safety,ppe,construction">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/PPE-in-construction.jpg" alt="Construction safety equipment and PPE" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">July 5, 2025</span>
+                                <span class="blog-category">Safety</span>
+                            </div>
+                            <h3 class="blog-title">Safety First: Essential PPE in Construction</h3>
+                            <p class="blog-excerpt">Learn about the critical importance of personal protective equipment in modern construction sites and how RH Global prioritizes worker safety in every project we undertake.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about construction safety">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Safety</span>
+                                    <span class="blog-tag">PPE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog-card" data-category="construction" data-tags="construction,techniques,innovation">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/istockphoto-1491423161-612x612-1.jpg" alt="Modern construction techniques" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">June 28, 2025</span>
+                                <span class="blog-category">Construction</span>
+                            </div>
+                            <h3 class="blog-title">Modern Construction Techniques in Nigeria</h3>
+                            <p class="blog-excerpt">Exploring innovative building methods and technologies that are transforming the Nigerian construction industry and improving project efficiency and quality.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about modern construction techniques">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Innovation</span>
+                                    <span class="blog-tag">Technology</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog-card" data-category="design" data-tags="design,sustainability,trends">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/istockphoto-1384357158-612x612-1.jpg" alt="Sustainable building design" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">June 15, 2025</span>
+                                <span class="blog-category">Design</span>
+                            </div>
+                            <h3 class="blog-title">Sustainable Building Design Trends</h3>
+                            <p class="blog-excerpt">How eco-friendly design principles are shaping the future of construction in Nigeria and creating more sustainable communities for generations to come.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about sustainable design">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Sustainability</span>
+                                    <span class="blog-tag">Green Building</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 4 -->
+                    <article class="blog-card" data-category="tips" data-tags="tips,budget,planning">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/istockphoto-1366768567-612x612-1.jpg" alt="Budget planning for construction" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">June 8, 2025</span>
+                                <span class="blog-category">Tips</span>
+                            </div>
+                            <h3 class="blog-title">Budget Planning for Your Construction Project</h3>
+                            <p class="blog-excerpt">Essential tips and strategies for effectively planning and managing your construction budget to ensure project success without compromising on quality.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about budget planning">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Budget</span>
+                                    <span class="blog-tag">Planning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 5 -->
+                    <article class="blog-card" data-category="design" data-tags="design,interior,trends">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/istockphoto-1351285466-612x612-1.jpg" alt="Interior design trends" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">May 25, 2025</span>
+                                <span class="blog-category">Design</span>
+                            </div>
+                            <h3 class="blog-title">2025 Interior Design Trends for Nigerian Homes</h3>
+                            <p class="blog-excerpt">Discover the latest interior design trends that are making waves in Nigerian homes, from color schemes to furniture choices and space optimization.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about interior design trends">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Interior</span>
+                                    <span class="blog-tag">Trends</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 6 -->
+                    <article class="blog-card" data-category="construction" data-tags="construction,materials,quality">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/istockphoto-1387919157-612x612-1.jpg" alt="Construction materials quality" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">May 18, 2025</span>
+                                <span class="blog-category">Construction</span>
+                            </div>
+                            <h3 class="blog-title">Choosing Quality Materials for Long-lasting Buildings</h3>
+                            <p class="blog-excerpt">A comprehensive guide to selecting the right construction materials that ensure durability, cost-effectiveness, and structural integrity for your building project.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about construction materials">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Materials</span>
+                                    <span class="blog-tag">Quality</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 7 -->
+                    <article class="blog-card" data-category="trends" data-tags="trends,smart,technology">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/istockphoto-498668901-612x612-1.jpg" alt="Smart home technology" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">May 10, 2025</span>
+                                <span class="blog-category">Trends</span>
+                            </div>
+                            <h3 class="blog-title">Smart Home Integration in Modern Construction</h3>
+                            <p class="blog-excerpt">How smart home technology is being integrated into new construction projects to create more efficient, secure, and convenient living spaces.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about smart home technology">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Smart Home</span>
+                                    <span class="blog-tag">Technology</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 8 -->
+                    <article class="blog-card" data-category="tips" data-tags="tips,maintenance,care">
+                        <div class="blog-image">
+                            <img src="assets/images/website images, videos/about-rh-global.png" alt="Building maintenance tips" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">April 28, 2025</span>
+                                <span class="blog-category">Tips</span>
+                            </div>
+                            <h3 class="blog-title">Essential Building Maintenance Tips</h3>
+                            <p class="blog-excerpt">Learn how to maintain your building properly to extend its lifespan, prevent costly repairs, and ensure the safety and comfort of occupants.</p>
+                            <div class="blog-footer">
+                                <a href="#" class="read-more" aria-label="Read more about building maintenance">Read More <i class="fa fa-arrow-right"></i></a>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Maintenance</span>
+                                    <span class="blog-tag">Care</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fa fa-search"></i>
+                    <h3>No articles found</h3>
+                    <p>Try adjusting your search terms or filter criteria to find what you're looking for.</p>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination-section">
+                    <div class="pagination" role="navigation" aria-label="Blog pagination">
+                        <button class="page-btn" id="prevBtn" disabled aria-label="Previous page">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <span class="page-btn active" data-page="1">1</span>
+                        <span class="page-btn" data-page="2">2</span>
+                        <span class="page-btn" data-page="3">3</span>
+                        <button class="page-btn" id="nextBtn" aria-label="Next page">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2 id="newsletter-title">Stay Updated with Our Newsletter</h2>
+                    <p>Get the latest construction insights, design trends, and industry news delivered directly to your inbox.</p>
+                    <form class="newsletter-form" id="newsletterForm" aria-label="Newsletter subscription">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit" class="btn-newsletter" aria-label="Subscribe to newsletter">
+                            <i class="fa fa-envelope"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <img src="assets/images/logo/footer-logo.png" alt="RH Global Innovation Logo" class="mb-3" style="max-height: 60px;">
+                        <p>Transforming visions into reality with affordable, quality construction solutions across Nigeria.</p>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Follow us on Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" aria-label="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="Connect with us on LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="services.html#construction">Building Construction</a></li>
+                            <li><a href="services.html#design">Interior Design</a></li>
+                            <li><a href="services.html#design">Exterior Design</a></li>
+                            <li><a href="services.html#specialized">Specialized Services</a></li>
+                            <li><a href="services.html#construction">Finishing Works</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-content">
+                        <h5>Contact Info</h5>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-map-marker me-2"></i>
+                            <span>Plot 34 Block 8c FGHS Pipeline Aboru, Iyana Ipaja, Lagos, Nigeria</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 808 7504 954</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-phone me-2"></i>
+                            <span>+234 813 5559 872</span>
+                        </div>
+                        <div class="contact-item mb-2">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>info@rhglobal.ng</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope me-2"></i>
+                            <span>jobs@rhglobal.ng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 RH Global Innovation Nig Ltd. All rights reserved. | Website: <a href="https://rhglobal.ng">rhglobal.ng</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348087504954" class="whatsapp-float" target="_blank" rel="noopener" 
+       aria-label="Contact us on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+        
+        // Blog Search and Filter Functionality
+        const searchInput = document.getElementById('searchInput');
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const noResults = document.getElementById('noResults');
+        
+        let currentFilter = 'all';
+        let currentSearch = '';
+        
+        // Search functionality
+        searchInput.addEventListener('input', function() {
+            currentSearch = this.value.toLowerCase();
+            filterAndSearchBlogs();
+        });
+        
+        // Filter functionality
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                // Update active state
+                filterTags.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-pressed', 'false');
+                });
+                this.classList.add('active');
+                this.setAttribute('aria-pressed', 'true');
+                
+                currentFilter = this.getAttribute('data-filter');
+                filterAndSearchBlogs();
+            });
+            
+            // Keyboard support
+            tag.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+        
+        function filterAndSearchBlogs() {
+            let visibleCount = 0;
+            
+            blogCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const tags = card.getAttribute('data-tags').toLowerCase();
+                const title = card.querySelector('.blog-title').textContent.toLowerCase();
+                const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                
+                const matchesFilter = currentFilter === 'all' || category === currentFilter;
+                const matchesSearch = currentSearch === '' || 
+                                    title.includes(currentSearch) || 
+                                    excerpt.includes(currentSearch) || 
+                                    tags.includes(currentSearch);
+                
+                if (matchesFilter && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+            
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+        
+        // Pagination functionality
+        const pageButtons = document.querySelectorAll('.page-btn[data-page]');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentPage = 1;
+        const totalPages = 3;
+        
+        pageButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const page = parseInt(this.getAttribute('data-page'));
+                goToPage(page);
+            });
+        });
+        
+        prevBtn.addEventListener('click', function() {
+            if (currentPage > 1) {
+                goToPage(currentPage - 1);
+            }
+        });
+        
+        nextBtn.addEventListener('click', function() {
+            if (currentPage < totalPages) {
+                goToPage(currentPage + 1);
+            }
+        });
+        
+        function goToPage(page) {
+            currentPage = page;
+            
+            // Update active page button
+            pageButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.getAttribute('data-page')) === page) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update prev/next button states
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === totalPages;
+            
+            // Scroll to top of blog section
+            document.getElementById('blogGrid').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Newsletter form submission
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.newsletter-input').value;
+            
+            // Simple email validation
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+        
+        // Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-area');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(17, 17, 17, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'var(--background-darker)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+        
+        // Error Handling for Images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                console.error('Failed to load image:', this.src);
+            });
+        });
+        
+        // Performance: Lazy Load Implementation
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
